@@ -1,0 +1,703 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+      Compila├º├úo de 04/02/2025 16:38:37 iniciada.
+      
+      Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
+      PrepareForBuild:
+        Criando o diret├│rio "Debug\\".
+        A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+        Criando o diret├│rio "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Criando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+        Tocando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
+      
+      Compila├º├úo com ├¬xito.
+          0 Aviso(s)
+          0 Erro(s)
+      
+      Tempo Decorrido 00:00:01.36
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-ohy2ty"
+      binary: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-ohy2ty"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-ohy2ty'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_089da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+        Compila├º├úo de 04/02/2025 16:38:40 iniciada.
+        
+        Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ohy2ty\\cmTC_089da.vcxproj" no n├│ 1 (destinos padr├úo).
+        PrepareForBuild:
+          Criando o diret├│rio "cmTC_089da.dir\\Debug\\".
+          A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+          Criando o diret├│rio "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ohy2ty\\Debug\\".
+          Criando o diret├│rio "cmTC_089da.dir\\Debug\\cmTC_089da.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_089da.dir\\Debug\\cmTC_089da.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_089da.dir\\Debug\\cmTC_089da.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_089da.dir\\Debug\\\\" /Fd"cmTC_089da.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.42.34436 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_089da.dir\\Debug\\\\" /Fd"cmTC_089da.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ohy2ty\\Debug\\cmTC_089da.exe" /INCREMENTAL /ILK:"cmTC_089da.dir\\Debug\\cmTC_089da.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-ohy2ty/Debug/cmTC_089da.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-ohy2ty/Debug/cmTC_089da.lib" /MACHINE:X64  /machine:x64 cmTC_089da.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_089da.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ohy2ty\\Debug\\cmTC_089da.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_089da.dir\\Debug\\cmTC_089da.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_089da.dir\\Debug\\cmTC_089da.tlog\\cmTC_089da.lastbuildstate".
+        Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ohy2ty\\cmTC_089da.vcxproj" (destinos padr├úo).
+        
+        Compila├º├úo com ├¬xito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:00.83
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34436.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+      Compila├º├úo de 04/02/2025 16:48:07 iniciada.
+      
+      Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
+      PrepareForBuild:
+        Criando o diret├│rio "Debug\\".
+        A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+        Criando o diret├│rio "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Criando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+        Tocando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
+      
+      Compila├º├úo com ├¬xito.
+          0 Aviso(s)
+          0 Erro(s)
+      
+      Tempo Decorrido 00:00:00.76
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-itacrr"
+      binary: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-itacrr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-itacrr'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_db582.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+        Compila├º├úo de 04/02/2025 16:48:08 iniciada.
+        
+        Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-itacrr\\cmTC_db582.vcxproj" no n├│ 1 (destinos padr├úo).
+        PrepareForBuild:
+          Criando o diret├│rio "cmTC_db582.dir\\Debug\\".
+          A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+          Criando o diret├│rio "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-itacrr\\Debug\\".
+          Criando o diret├│rio "cmTC_db582.dir\\Debug\\cmTC_db582.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_db582.dir\\Debug\\cmTC_db582.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_db582.dir\\Debug\\cmTC_db582.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_db582.dir\\Debug\\\\" /Fd"cmTC_db582.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.42.34436 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_db582.dir\\Debug\\\\" /Fd"cmTC_db582.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-itacrr\\Debug\\cmTC_db582.exe" /INCREMENTAL /ILK:"cmTC_db582.dir\\Debug\\cmTC_db582.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-itacrr/Debug/cmTC_db582.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-itacrr/Debug/cmTC_db582.lib" /MACHINE:X64  /machine:x64 cmTC_db582.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_db582.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-itacrr\\Debug\\cmTC_db582.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_db582.dir\\Debug\\cmTC_db582.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_db582.dir\\Debug\\cmTC_db582.tlog\\cmTC_db582.lastbuildstate".
+        Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-itacrr\\cmTC_db582.vcxproj" (destinos padr├úo).
+        
+        Compila├º├úo com ├¬xito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34436.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 5.15.167.4-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /mnt/c/msys64/ucrt64/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/3.28.3/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-B1mqGE"
+      binary: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-B1mqGE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-B1mqGE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a99df/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a99df.dir/build.make CMakeFiles/cmTC_a99df.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-B1mqGE'
+        Building CXX object CMakeFiles/cmTC_a99df.dir/CMakeCXXCompilerABI.cpp.o
+        /mnt/c/msys64/ucrt64/bin/g++.exe   -v -o CMakeFiles/cmTC_a99df.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-14.2.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --with-native-system-header-dir=/ucrt64/include --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,rust,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-lto --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev2, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --disable-libstdcxx-debug --enable-plugin --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a99df.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a99df.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a99df.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\itiro\\AppData\\Local\\Temp\\ccLiACb6.s
+        GNU C++17 (Rev2, Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/backward"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include"
+        ignoring nonexistent directory "D:/a/msys64/ucrt64/include"
+        ignoring nonexistent directory "/ucrt64/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"
+        ignoring nonexistent directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "D:/a/msys64/ucrt64/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/x86_64-w64-mingw32
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/backward
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed
+        End of search list.
+        cc1plus.exe: fatal error: /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp: No such file or directory
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_a99df.dir/build.make:78: CMakeFiles/cmTC_a99df.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-B1mqGE'
+        gmake: *** [Makefile:127: cmTC_a99df/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working CXX compiler: /mnt/c/msys64/ucrt64/bin/g++.exe"
+    directories:
+      source: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM"
+      binary: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f98b6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f98b6.dir/build.make CMakeFiles/cmTC_f98b6.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM'
+        Building CXX object CMakeFiles/cmTC_f98b6.dir/testCXXCompiler.cxx.o
+        /mnt/c/msys64/ucrt64/bin/g++.exe    -o CMakeFiles/cmTC_f98b6.dir/testCXXCompiler.cxx.o -c /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM/testCXXCompiler.cxx
+        cc1plus.exe: fatal error: /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM/testCXXCompiler.cxx: No such file or directory
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_f98b6.dir/build.make:78: CMakeFiles/cmTC_f98b6.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-yUNmpM'
+        gmake: *** [Makefile:127: cmTC_f98b6/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /mnt/c/msys64/ucrt64/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/3.28.3/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-tsVkrq"
+      binary: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-tsVkrq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-tsVkrq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_526fd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_526fd.dir/build.make CMakeFiles/cmTC_526fd.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-tsVkrq'
+        Building CXX object CMakeFiles/cmTC_526fd.dir/CMakeCXXCompilerABI.cpp.o
+        /mnt/c/msys64/ucrt64/bin/g++.exe   -v -o CMakeFiles/cmTC_526fd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-14.2.0/configure --prefix=/ucrt64 --with-local-prefix=/ucrt64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --with-native-system-header-dir=/ucrt64/include --libexecdir=/ucrt64/lib --enable-bootstrap --enable-checking=release --with-arch=nocona --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,rust,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch --enable-lto --enable-libgomp --disable-libssp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/ucrt64 --with-mpfr=/ucrt64 --with-mpc=/ucrt64 --with-isl=/ucrt64 --with-pkgversion='Rev2, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --disable-libstdcxx-debug --enable-plugin --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_526fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_526fd.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_526fd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\itiro\\AppData\\Local\\Temp\\ccBhDO7S.s
+        GNU C++17 (Rev2, Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/backward"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include"
+        ignoring nonexistent directory "D:/a/msys64/ucrt64/include"
+        ignoring nonexistent directory "/ucrt64/include"
+        ignoring duplicate directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"
+        ignoring nonexistent directory "C:/msys64/ucrt64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "D:/a/msys64/ucrt64/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/x86_64-w64-mingw32
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include/c++/14.2.0/backward
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../include
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed
+        End of search list.
+        cc1plus.exe: fatal error: /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp: No such file or directory
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_526fd.dir/build.make:78: CMakeFiles/cmTC_526fd.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-tsVkrq'
+        gmake: *** [Makefile:127: cmTC_526fd/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working CXX compiler: /mnt/c/msys64/ucrt64/bin/g++.exe"
+    directories:
+      source: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW"
+      binary: "/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_be9c3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_be9c3.dir/build.make CMakeFiles/cmTC_be9c3.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW'
+        Building CXX object CMakeFiles/cmTC_be9c3.dir/testCXXCompiler.cxx.o
+        /mnt/c/msys64/ucrt64/bin/g++.exe    -o CMakeFiles/cmTC_be9c3.dir/testCXXCompiler.cxx.o -c /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW/testCXXCompiler.cxx
+        cc1plus.exe: fatal error: /mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW/testCXXCompiler.cxx: No such file or directory
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_be9c3.dir/build.make:78: CMakeFiles/cmTC_be9c3.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-AslSzW'
+        gmake: *** [Makefile:127: cmTC_be9c3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+      Compila├º├úo de 04/02/2025 19:21:52 iniciada.
+      
+      Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
+      PrepareForBuild:
+        Criando o diret├│rio "Debug\\".
+        A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+        Criando o diret├│rio "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Criando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+        Tocando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
+      
+      Compila├º├úo com ├¬xito.
+          0 Aviso(s)
+          0 Erro(s)
+      
+      Tempo Decorrido 00:00:01.14
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-wye9fx"
+      binary: "C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-wye9fx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-wye9fx'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f1783.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
+        Compila├º├úo de 04/02/2025 19:21:53 iniciada.
+        
+        Projeto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wye9fx\\cmTC_f1783.vcxproj" no n├│ 1 (destinos padr├úo).
+        PrepareForBuild:
+          Criando o diret├│rio "cmTC_f1783.dir\\Debug\\".
+          A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
+          Criando o diret├│rio "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wye9fx\\Debug\\".
+          Criando o diret├│rio "cmTC_f1783.dir\\Debug\\cmTC_f1783.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_f1783.dir\\Debug\\cmTC_f1783.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_f1783.dir\\Debug\\cmTC_f1783.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f1783.dir\\Debug\\\\" /Fd"cmTC_f1783.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.42.34436 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f1783.dir\\Debug\\\\" /Fd"cmTC_f1783.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wye9fx\\Debug\\cmTC_f1783.exe" /INCREMENTAL /ILK:"cmTC_f1783.dir\\Debug\\cmTC_f1783.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-wye9fx/Debug/cmTC_f1783.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/itiro/Documentos/BioCad/build/CMakeFiles/CMakeScratch/TryCompile-wye9fx/Debug/cmTC_f1783.lib" /MACHINE:X64  /machine:x64 cmTC_f1783.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_f1783.vcxproj -> C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wye9fx\\Debug\\cmTC_f1783.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_f1783.dir\\Debug\\cmTC_f1783.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_f1783.dir\\Debug\\cmTC_f1783.tlog\\cmTC_f1783.lastbuildstate".
+        Projeto de compila├º├úo pronto "C:\\Users\\itiro\\Documentos\\BioCad\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wye9fx\\cmTC_f1783.vcxproj" (destinos padr├úo).
+        
+        Compila├º├úo com ├¬xito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:00.77
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34436.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

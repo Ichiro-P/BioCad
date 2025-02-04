@@ -1,0 +1,10 @@
+^C:\USERS\ITIRO\DOCUMENTOS\BIOCAD\BUILD\CMAKEFILES\F2F26BA22D72F7A6739601B69BD7B846\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/itiro/Documentos/BioCad -BC:/Users/itiro/Documentos/BioCad/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/itiro/Documentos/BioCad/build/BioCad.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

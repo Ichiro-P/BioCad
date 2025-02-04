@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Windows",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/MeuProjeto.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Debug Linux (WSL)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/MeuProjeto",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
