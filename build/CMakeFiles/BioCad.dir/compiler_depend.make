@@ -552,6 +552,8 @@ CMakeFiles/BioCad.dir/src/main.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/mai
 
 CMakeFiles/BioCad.dir/src/tela.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/tela.cpp \
   C:/Users/itiro/Documentos/BioCad/include/atendente.hpp \
+  C:/Users/itiro/Documentos/BioCad/include/cliente.hpp \
+  C:/Users/itiro/Documentos/BioCad/include/dados.hpp \
   C:/Users/itiro/Documentos/BioCad/include/gerente.hpp \
   C:/Users/itiro/Documentos/BioCad/include/tela.hpp \
   C:/msys64/ucrt64/include/_mingw.h \
@@ -1018,3 +1020,5 @@ C:/Users/itiro/Documentos/BioCad/include/hashes.hpp:
 C:/msys64/ucrt64/include/c++/14.2.0/array:
 
 C:/Users/itiro/Documentos/BioCad/src/tela.cpp:
+
+C:/Users/itiro/Documentos/BioCad/include/dados.hpp:

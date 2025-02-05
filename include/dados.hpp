@@ -6,7 +6,33 @@
 #include <atendente.hpp>
 #include <cliente.hpp>
 
-std::vector<cliente> clientes;
+
+std::vector<plano> planos {
+
+};
+
+std::vector<contrato> contratos {
+    contrato(
+        "Irineu Pereira dos Santos", 
+        "01/02/2025",
+        "01/02/2026",
+        12,
+        planos.at(0)
+    )
+};
+
+std::vector<cliente> clientes {
+    cliente(
+        "Irineu Pereira dos Santos",
+        "123.456.789-00",
+        "(44)92001-3020",
+        "R. Jose boiko n. 13",
+        "11/11/2001",
+        "01/02/2025",
+        12,
+        contratos.at(0)
+    )
+};
 std::vector<atendente> atendentes;
 
 void visualizarRelatorioFinanceiro();
