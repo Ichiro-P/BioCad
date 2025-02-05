@@ -5,7 +5,7 @@
             "name": "Debug Windows",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/MeuProjeto.exe",
+            "program": "${workspaceFolder}/build/BioCad.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false
@@ -14,7 +14,7 @@
             "name": "Debug Linux (WSL)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/MeuProjeto",
+            "program": "${workspaceFolder}/build/BioCad",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

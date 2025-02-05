@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
+
 #include <atendente.hpp>
 
 atendente::atendente(const std::string &id, const std::string &senha) : id(id), senha(senha) {}
@@ -13,14 +15,10 @@ std::string atendente::getSenha() const& {
     return senha;
 }
 
-bool atendente::validarAtendente(const std::string &caminhoHashes) {
+bool atendente::validarAtendente(const std::vector<std::string>& hashes) {
     std::string tempHash = senha + id;
-    std::ifstream arquivoHashes(caminhoHashes);
-    std::string linha;
-    while(std::getline(arquivoHashes, linha)) {
-        if(linha == tempHash) {
-            return true;
-        }
+    for(const auto& hash: hashes) {
+        if(hash == tempHash) return true;
     }
     return false;
 }

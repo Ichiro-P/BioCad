@@ -8,11 +8,9 @@
 #include <gerente.hpp>
 #include <atendente.hpp>
 #include <cliente.hpp>
+#include <hashes.hpp>
 
 int main() {
-    const std::string hashesGerente = "dados/hashesGerente.txt";
-    const std::string hashesAtendente = "dados/hashesAtendentes.txt";
-
     const std::string mensagemInicio = "Bem-vindo ao sistema BioCad.\nPara continuar, informe seu id:\n";
     const std::string mensagemSenha = "Informe tambem sua senha:\n";
     const std::string mensagemSucesso = "Bem-vindo.\n";
@@ -59,7 +57,7 @@ int main() {
     gerente Gerente = gerente(id, senha);
     atendente Atendente = atendente(id, senha);
 
-    bool eGerente = Gerente.validarGerente(hashesGerente);
+    bool eGerente = Gerente.validarGerente(hashGerente);
     bool eAtendente = Atendente.validarAtendente(hashesAtendente);
 
     while(!eGerente && !eAtendente) {
@@ -72,8 +70,8 @@ int main() {
         Gerente = gerente(id, senha);
         Atendente = atendente(id, senha);
 
-        eGerente = Gerente.validarGerente(hashesGerente);
-        eAtendente = Atendente.validarAtendente(hashesGerente);
+        eGerente = Gerente.validarGerente(hashGerente);
+        eAtendente = Atendente.validarAtendente(hashesAtendente);
     }
     int entrada;
     if(eGerente) {

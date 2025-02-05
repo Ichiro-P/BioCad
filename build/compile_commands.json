@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\atendente.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\atendente.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/atendente.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/atendente.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\cliente.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\cliente.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/cliente.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/cliente.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\gerente.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\gerente.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/gerente.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/gerente.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\main.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\main.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/main.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/main.cpp.obj"
+}
+]

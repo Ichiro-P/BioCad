@@ -13,14 +13,6 @@ std::string gerente::getSenha() const& {
     return senha;
 }
 
-bool gerente::validarGerente(const std::string &caminhoHashes) {
-    std::string tempHash = senha + id;
-    std::ifstream arquivoHashes(caminhoHashes);
-    std::string linha;
-    while(std::getline(arquivoHashes, linha)) {
-        if(linha == tempHash) {
-            return true;
-        }
-    }
-    return false;
+bool gerente::validarGerente(const std::string &hash) {
+    return hash == (senha + id);
 }
