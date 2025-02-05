@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <gerente.hpp>
+#include <hashes.hpp>
 
 gerente::gerente(const std::string &id, const std::string &senha) : id(id), senha(senha) {}
 
@@ -17,8 +18,8 @@ bool gerente::getAcesso() const& {
     return acessoPermitido;
 }
 
-bool gerente::validarGerente(const std::string &hash) {
-    if(hash == (senha + id)) {
+bool gerente::validarGerente() {
+    if(hashGerente == (senha + id)) {
         acessoPermitido = true;
         return true;
     }

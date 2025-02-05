@@ -12,5 +12,5 @@ class gerente {
     virtual std::string getId() const&;
     virtual std::string getSenha() const&;
     virtual bool getAcesso() const&;
-    bool validarGerente(const std::string& hash);
+    bool validarGerente();
 };

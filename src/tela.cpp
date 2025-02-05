@@ -13,7 +13,7 @@ void tela::telaInicial(std::string& id, std::string& senha) {
     std::getline(std::cin, senha);
 }
 
-void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente) {
+void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente, dados& eDados) {
     int entrada;
     std::cout << mensagemSucesso << mensagemTela;
     if(eGerente.getAcesso()) {
@@ -22,40 +22,40 @@ void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente) {
             std::cin >> entrada;
             switch(entrada) {
                 case 1:
-                listarClientes();
+                eDados.listarClientes();
                 break;
                 case 2:
-                cadastrarCliente();
+                eDados.cadastrarCliente();
                 break;
                 case 3:
-                atualizarCliente();
+                eDados.atualizarCliente();
                 break;
                 case 4:
-                removerCliente();
+                eDados.removerCliente();
                 break;
                 case 5:
-                listarAtendentes();
+                eDados.listarAtendentes();
                 break;
                 case 6:
-                cadastrarAtendente();
+                eDados.cadastrarAtendente();
                 break;
                 case 7:
-                atualizarAtendente();
+                eDados.atualizarAtendente();
                 break;
                 case 8:
-                removerAtendente();
+                eDados.removerAtendente();
                 break;
                 case 9:
-                listarPersonalTrainers();
+                eDados.listarPersonalTrainers();
                 break;
                 case 'a':
-                cadastrarPersonalTrainer();
+                eDados.cadastrarPersonalTrainer();
                 break;
                 case 'b':
-                atualizarPersonalTrainer();
+                eDados.atualizarPersonalTrainer();
                 break;
                 case 'c':
-                removerPersonalTrainer();
+                eDados.removerPersonalTrainer();
                 break;
                 case 0:
                 break;
@@ -67,16 +67,16 @@ void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente) {
             std::cin >> entrada;
             switch(entrada) {
                 case 1:
-                listarClientes();
+                eDados.listarClientes();
                 break;
                 case 2:
-                cadastrarCliente();
+                eDados.cadastrarCliente();
                 break;
                 case 3:
-                atualizarCliente();
+                eDados.atualizarCliente();
                 break;
                 case 4:
-                removerCliente();
+                eDados.removerCliente();
                 break;
                 case 0:
                 break;
@@ -88,7 +88,7 @@ void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente) {
             std::cin >> entrada;
             switch(entrada) {
                 case 1:
-                listarClientes();
+                eDados.listarClientes();
                 break;
                 case 0:
                 break;

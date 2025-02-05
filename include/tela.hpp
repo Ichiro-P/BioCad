@@ -7,11 +7,12 @@
 #include <gerente.hpp>
 #include <gerente.hpp>
 #include <atendente.hpp>
+#include <dados.hpp>
 
 
 class tela {
-    const std::string mensagemInicio = "Bem-vindo ao sistema BioCad.\nPara continuar, informe seu id:\n";
-    const std::string mensagemSenha = "Informe tambem sua senha:\n";
+    const std::string mensagemInicio = "Bem-vindo ao sistema BioCad.\nPara continuar, informe seu id:";
+    const std::string mensagemSenha = "Informe tambem sua senha:";
     const std::string mensagemSucesso = "Bem-vindo.\n";
     const std::string mensagemNegado = "Credenciais incorretas. Informe seu id novamente:\n";
     const std::string mensagemTela = "--- Sistema BioCad ---\n";
@@ -48,7 +49,7 @@ class tela {
 public:
     tela() = default;
     void telaInicial(std::string& id, std::string& senha);
-    void telaAcesso(const gerente& eGerente, const atendente& eAtendente);
+    void telaAcesso(const gerente& eGerente, const atendente& eAtendente, dados& eDados);
     void telaNegado(std::string& id, std::string& senha);
 
 };

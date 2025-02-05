@@ -9,9 +9,11 @@
 #include <gerente.hpp>
 #include <atendente.hpp>
 #include <cliente.hpp>
-#include <hashes.hpp>
+#include <dados.hpp>
 
 int main() {
+    dados Dados;
+
     std::string id;
     std::string senha;
 
@@ -22,8 +24,8 @@ int main() {
     gerente Gerente = gerente(id, senha);
     atendente Atendente = atendente(id, senha);
 
-    Gerente.validarGerente(hashGerente);
-    Atendente.validarAtendente(hashesAtendente);
+    Gerente.validarGerente();
+    Atendente.validarAtendente();
 
     while(!Gerente.getAcesso() && !Atendente.getAcesso()) {
         telaSistema.telaNegado(id, senha);
@@ -32,8 +34,9 @@ int main() {
         Gerente = gerente(id, senha);
         Atendente = atendente(id, senha);
 
-        Gerente.validarGerente(hashGerente);
-        Atendente.validarAtendente(hashesAtendente);
+        Gerente.validarGerente();
+        Atendente.validarAtendente();
     }
-    telaSistema.telaAcesso(Gerente, Atendente);
+    telaSistema.telaAcesso(Gerente, Atendente, Dados);
+    return 0;
 }

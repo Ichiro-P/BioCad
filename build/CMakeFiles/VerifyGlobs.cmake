@@ -7,7 +7,9 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/itiro/Documentos/BioCad/src/*
 set(OLD_GLOB
   "C:/Users/itiro/Documentos/BioCad/src/atendente.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/cliente.cpp"
+  "C:/Users/itiro/Documentos/BioCad/src/dados.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/gerente.cpp"
+  "C:/Users/itiro/Documentos/BioCad/src/hashes.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/main.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/tela.cpp"
   )

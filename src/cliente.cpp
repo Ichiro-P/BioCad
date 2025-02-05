@@ -1,10 +1,11 @@
 #include <string>
 #include <cliente.hpp>
-#include <dados.hpp>
+
+int cliente::n = 0;
 
 cliente::cliente(const std::string &nome, const std::string &cpf, const std::string &telefone, const std::string &endereco, const std::string &dataNascimento, const std::string &dataCadastro, const int& duracao, const contrato &contratoVigente) 
 : nome(nome), cpf(cpf), telefone(telefone), endereco(endereco), dataNascimento(dataNascimento), dataCadastro(dataCadastro), contratoVigente(contratoVigente) {
-    id = clientes.size() + 1;
+    id = n++;
 }
 
 int cliente::getId() const& {

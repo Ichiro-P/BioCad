@@ -3,12 +3,8 @@
 #include <string>
 #include <vector>
 
-std::string hashGerente = "rootroot";
+extern std::string hashGerente;
 
-std::vector<std::string> hashesAtendente {
-    
-};
+extern std::vector<std::string> hashesAtendente;
 
-std::vector<std::string> hashesPersonalTrainer {
-    
-};
+extern std::vector<std::string> hashesPersonalTrainer;

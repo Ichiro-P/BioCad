@@ -13,9 +13,21 @@
 },
 {
   "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\dados.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\dados.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/dados.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/dados.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\gerente.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\gerente.cpp",
   "file": "C:/Users/itiro/Documentos/BioCad/src/gerente.cpp",
   "output": "CMakeFiles/BioCad.dir/src/gerente.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\hashes.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\hashes.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/hashes.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/hashes.cpp.obj"
 },
 {
   "directory": "C:/Users/itiro/Documentos/BioCad/build",

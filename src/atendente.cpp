@@ -4,6 +4,7 @@
 #include <vector>
 
 #include <atendente.hpp>
+#include <hashes.hpp>
 
 atendente::atendente(const std::string &id, const std::string &senha) : id(id), senha(senha) {}
 
@@ -19,9 +20,9 @@ bool atendente::getAcesso() const& {
     return acessoPermitido;
 }
 
-bool atendente::validarAtendente(const std::vector<std::string> &hashes) {
+bool atendente::validarAtendente() {
     std::string tempHash = senha + id;
-    for(const auto& hash: hashes) {
+    for(const auto& hash: hashesAtendente) {
         if(hash == tempHash) {
             acessoPermitido = true;
             return true;

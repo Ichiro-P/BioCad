@@ -177,6 +177,30 @@ src/cliente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/cliente.cpp.s
 .PHONY : src/cliente.cpp.s
 
+src/dados.obj: src/dados.cpp.obj
+.PHONY : src/dados.obj
+
+# target to build an object file
+src/dados.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.obj
+.PHONY : src/dados.cpp.obj
+
+src/dados.i: src/dados.cpp.i
+.PHONY : src/dados.i
+
+# target to preprocess a source file
+src/dados.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.i
+.PHONY : src/dados.cpp.i
+
+src/dados.s: src/dados.cpp.s
+.PHONY : src/dados.s
+
+# target to generate assembly for a file
+src/dados.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.s
+.PHONY : src/dados.cpp.s
+
 src/gerente.obj: src/gerente.cpp.obj
 .PHONY : src/gerente.obj
 
@@ -200,6 +224,30 @@ src/gerente.s: src/gerente.cpp.s
 src/gerente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/gerente.cpp.s
 .PHONY : src/gerente.cpp.s
+
+src/hashes.obj: src/hashes.cpp.obj
+.PHONY : src/hashes.obj
+
+# target to build an object file
+src/hashes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.obj
+.PHONY : src/hashes.cpp.obj
+
+src/hashes.i: src/hashes.cpp.i
+.PHONY : src/hashes.i
+
+# target to preprocess a source file
+src/hashes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.i
+.PHONY : src/hashes.cpp.i
+
+src/hashes.s: src/hashes.cpp.s
+.PHONY : src/hashes.s
+
+# target to generate assembly for a file
+src/hashes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.s
+.PHONY : src/hashes.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -264,9 +312,15 @@ help:
 	@echo ... src/cliente.obj
 	@echo ... src/cliente.i
 	@echo ... src/cliente.s
+	@echo ... src/dados.obj
+	@echo ... src/dados.i
+	@echo ... src/dados.s
 	@echo ... src/gerente.obj
 	@echo ... src/gerente.i
 	@echo ... src/gerente.s
+	@echo ... src/hashes.obj
+	@echo ... src/hashes.i
+	@echo ... src/hashes.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

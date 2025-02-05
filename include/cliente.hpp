@@ -56,6 +56,8 @@ class contrato {
 
 
 class cliente {
+    static int n;
+
     std::string nome;
     int id;
     std::string cpf;

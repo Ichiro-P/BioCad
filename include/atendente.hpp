@@ -13,5 +13,5 @@ class atendente {
     virtual std::string getId() const&;
     virtual std::string getSenha() const&;
     virtual bool getAcesso() const&;
-    bool validarAtendente(const std::vector<std::string>& hashes);
+    bool validarAtendente();
 };
