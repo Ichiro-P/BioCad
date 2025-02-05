@@ -37,6 +37,12 @@
 },
 {
   "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\personalTrainer.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\personalTrainer.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/personalTrainer.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\tela.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\tela.cpp",
   "file": "C:/Users/itiro/Documentos/BioCad/src/tela.cpp",
   "output": "CMakeFiles/BioCad.dir/src/tela.cpp.obj"

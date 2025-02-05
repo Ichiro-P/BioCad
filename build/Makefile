@@ -273,6 +273,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/personalTrainer.obj: src/personalTrainer.cpp.obj
+.PHONY : src/personalTrainer.obj
+
+# target to build an object file
+src/personalTrainer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj
+.PHONY : src/personalTrainer.cpp.obj
+
+src/personalTrainer.i: src/personalTrainer.cpp.i
+.PHONY : src/personalTrainer.i
+
+# target to preprocess a source file
+src/personalTrainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.i
+.PHONY : src/personalTrainer.cpp.i
+
+src/personalTrainer.s: src/personalTrainer.cpp.s
+.PHONY : src/personalTrainer.s
+
+# target to generate assembly for a file
+src/personalTrainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.s
+.PHONY : src/personalTrainer.cpp.s
+
 src/tela.obj: src/tela.cpp.obj
 .PHONY : src/tela.obj
 
@@ -324,6 +348,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/personalTrainer.obj
+	@echo ... src/personalTrainer.i
+	@echo ... src/personalTrainer.s
 	@echo ... src/tela.obj
 	@echo ... src/tela.i
 	@echo ... src/tela.s

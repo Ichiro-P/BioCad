@@ -11,6 +11,7 @@ set(OLD_GLOB
   "C:/Users/itiro/Documentos/BioCad/src/gerente.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/hashes.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/main.cpp"
+  "C:/Users/itiro/Documentos/BioCad/src/personalTrainer.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/tela.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

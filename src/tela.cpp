@@ -4,6 +4,7 @@
 #include <tela.hpp>
 #include <gerente.hpp>
 #include <atendente.hpp>
+#include <personalTrainer.hpp>
 #include <dados.hpp>
 
 void tela::telaInicial(std::string& id, std::string& senha) {
@@ -13,7 +14,7 @@ void tela::telaInicial(std::string& id, std::string& senha) {
     std::getline(std::cin, senha);
 }
 
-void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente, dados& eDados) {
+void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente, const personalTrainer& ePersonalTrainer, dados& eDados) {
     int entrada;
     std::cout << mensagemSucesso << mensagemTela;
     if(eGerente.getAcesso()) {
@@ -82,7 +83,7 @@ void tela::telaAcesso(const gerente& eGerente, const atendente& eAtendente, dado
                 break;
             }
         } while (entrada < 0 && entrada > 4);
-    } else {
+    } else if (ePersonalTrainer.getAcesso()){
         do {
             for(const auto& msg: mensagemTelaPersonalTrainer) std::cout << msg;
             std::cin >> entrada;

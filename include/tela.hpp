@@ -5,8 +5,8 @@
 #include <array>
 
 #include <gerente.hpp>
-#include <gerente.hpp>
 #include <atendente.hpp>
+#include <personalTrainer.hpp>
 #include <dados.hpp>
 
 
@@ -49,7 +49,7 @@ class tela {
 public:
     tela() = default;
     void telaInicial(std::string& id, std::string& senha);
-    void telaAcesso(const gerente& eGerente, const atendente& eAtendente, dados& eDados);
+    void telaAcesso(const gerente& eGerente, const atendente& eAtendente, const personalTrainer& ePersonalTrainer, dados& eDados);
     void telaNegado(std::string& id, std::string& senha);
 
 };

@@ -1,6 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <gerente.hpp>
 #include <hashes.hpp>
 
