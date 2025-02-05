@@ -11,7 +11,7 @@
 
 int main() {
     const std::string hashesGerente = "dados/hashesGerente.txt";
-    const std::string hashesAtendentes = "dados/hashesAtendentes.txt";
+    const std::string hashesAtendente = "dados/hashesAtendentes.txt";
 
     const std::string mensagemInicio = "Bem-vindo ao sistema BioCad.\nPara continuar, informe seu id:\n";
     const std::string mensagemSenha = "Informe tambem sua senha:\n";
@@ -60,7 +60,7 @@ int main() {
     atendente Atendente = atendente(id, senha);
 
     bool eGerente = Gerente.validarGerente(hashesGerente);
-    bool eAtendente = Atendente.validarAtendente(hashesGerente);
+    bool eAtendente = Atendente.validarAtendente(hashesAtendente);
 
     while(!eGerente && !eAtendente) {
         std::cout << mensagemNegado;

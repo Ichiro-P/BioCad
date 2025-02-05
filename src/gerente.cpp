@@ -16,10 +16,6 @@ std::string gerente::getSenha() const& {
 bool gerente::validarGerente(const std::string &caminhoHashes) {
     std::string tempHash = senha + id;
     std::ifstream arquivoHashes(caminhoHashes);
-    if(!arquivoHashes.is_open()) {
-        std::cerr << "Erro ao abrir lista de Gerente.\n";
-        return false;
-    }
     std::string linha;
     while(std::getline(arquivoHashes, linha)) {
         if(linha == tempHash) {

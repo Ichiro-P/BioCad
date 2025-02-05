@@ -12,25 +12,16 @@ enum class statusPagamento {
     pago
 };
 
-class cliente {
-    std::string nome;
-    int id;
-    std::string CPF;
-    std::string telefone;
-    std::string endereco;
-    std::string dataNascimento;
-    std::string dataCadastro;
-
-    contrato contratoVigente;
+class mensalidade {
+    std::string dataVencimento;
+    float valor;
+    statusPagamento status;
 };
 
 
-class contrato {
-    std::string nomeCliente;
-    std::string dataInicio;
-    std::string dataVencimento;
-
-    plano planoVigente;
+class treinoPlano {
+    std::vector<std::string> objetivosCliente;
+    std::string condicaoMedica;
 };
 
 
@@ -41,13 +32,23 @@ class plano {
     std::vector<mensalidade> mensalidades;
 };
 
-class treinoPlano {
-    std::vector<std::string> objetivosCliente;
-    std::string condicaoMedica;
+class contrato {
+    std::string nomeCliente;
+    std::string dataInicio;
+    std::string dataVencimento;
+
+    plano planoVigente;
 };
 
-class mensalidade {
-    std::string dataVencimento;
-    float valor;
-    statusPagamento status;
+
+class cliente {
+    std::string nome;
+    int id;
+    std::string CPF;
+    std::string telefone;
+    std::string endereco;
+    std::string dataNascimento;
+    std::string dataCadastro;
+
+    contrato contratoVigente;
 };
