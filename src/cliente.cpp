@@ -18,7 +18,7 @@ std::string cliente::getNome() const& {
 contrato::contrato(const std::string &nomeCliente, const std::string &dataInicio, const std::string &dataVencimento, const int& duracao, const plano &planoVigente) 
 : nomeCliente(nomeCliente), dataInicio(dataInicio), dataVencimento(dataVencimento), duracao(duracao), planoVigente(planoVigente) {}
 
-plano::plano(const tipoPlano& tipo, const treinoPlano& treino, const int& duracao) : tipo(tipo), treino(treino) {
+plano::plano(const treinoPlano& treino, const int& duracao, const tipoPlano& tipo) : tipo(tipo), treino(treino) {
     for(int i = 0; i < duracao; ++i) {
         mensalidades.emplace_back(60.f, i+1);
     }

@@ -40,7 +40,7 @@ class plano {
     std::vector<mensalidade> mensalidades;
 
     public:
-    plano(const tipoPlano& tipo = tipoPlano::anual, const treinoPlano& treino, const int& duracao);
+    plano(const treinoPlano& treino, const int& duracao, const tipoPlano& tipo = tipoPlano::anual);
 };
 
 class contrato {

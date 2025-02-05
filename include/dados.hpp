@@ -7,7 +7,15 @@
 #include <cliente.hpp>
 
 
+std::vector<treinoPlano> treinos {
+    treinoPlano()
+};
+
 std::vector<plano> planos {
+    plano(
+        treinos.at(0),
+        12
+    )
 
 };
 
