@@ -13,6 +13,14 @@ std::string gerente::getSenha() const& {
     return senha;
 }
 
+bool gerente::getAcesso() const& {
+    return acessoPermitido;
+}
+
 bool gerente::validarGerente(const std::string &hash) {
-    return hash == (senha + id);
+    if(hash == (senha + id)) {
+        acessoPermitido = true;
+        return true;
+    }
+    return false;
 }

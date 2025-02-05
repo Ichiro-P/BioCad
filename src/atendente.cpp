@@ -15,10 +15,17 @@ std::string atendente::getSenha() const& {
     return senha;
 }
 
-bool atendente::validarAtendente(const std::vector<std::string>& hashes) {
+bool atendente::getAcesso() const& {
+    return acessoPermitido;
+}
+
+bool atendente::validarAtendente(const std::vector<std::string> &hashes) {
     std::string tempHash = senha + id;
     for(const auto& hash: hashes) {
-        if(hash == tempHash) return true;
+        if(hash == tempHash) {
+            acessoPermitido = true;
+            return true;
+        }
     }
     return false;
 }

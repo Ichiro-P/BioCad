@@ -225,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tela.obj: src/tela.cpp.obj
+.PHONY : src/tela.obj
+
+# target to build an object file
+src/tela.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.obj
+.PHONY : src/tela.cpp.obj
+
+src/tela.i: src/tela.cpp.i
+.PHONY : src/tela.i
+
+# target to preprocess a source file
+src/tela.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.i
+.PHONY : src/tela.cpp.i
+
+src/tela.s: src/tela.cpp.s
+.PHONY : src/tela.s
+
+# target to generate assembly for a file
+src/tela.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.s
+.PHONY : src/tela.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -246,6 +270,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/tela.obj
+	@echo ... src/tela.i
+	@echo ... src/tela.s
 .PHONY : help
 
 

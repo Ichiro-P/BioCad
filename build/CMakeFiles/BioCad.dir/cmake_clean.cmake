@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BioCad.dir/src/gerente.cpp.obj.d"
   "CMakeFiles/BioCad.dir/src/main.cpp.obj"
   "CMakeFiles/BioCad.dir/src/main.cpp.obj.d"
+  "CMakeFiles/BioCad.dir/src/tela.cpp.obj"
+  "CMakeFiles/BioCad.dir/src/tela.cpp.obj.d"
   "libBioCad.dll.a"
 )
 
