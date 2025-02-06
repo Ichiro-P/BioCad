@@ -14,9 +14,12 @@
 #include <limits>
 
 int main() {
+    auto usuarioDAO = std::make_unique<UsuarioDAO>();
+    std::shared_ptr<LoginManager> loginManager = std::make_unique<LoginManager>(std::move(usuarioDAO));
+    std::shared_ptr<UsuarioManager> usuarioManager = std::make_unique<UsuarioManager>(std::move(usuarioDAO));
 
-    auto usuarioDao = std::make_unique<UsuarioDAO>();
-    LoginManager loginManager(usuarioDao.release());
+    auto clienteDAO = std::make_unique<ClienteDAO>();
+    std::shared_ptr<ClienteManager> clienteManager = std::make_unique<ClienteManager>(std::move(clienteDAO));
     
     std::string login, senha;
     
@@ -26,16 +29,17 @@ int main() {
     std::cout << "Senha: ";
     std::getline(std::cin, senha);
 
-    std::shared_ptr<Usuario> usuario = loginManager.autenticar(login, senha);
+    std::shared_ptr<Usuario> usuario = loginManager->autenticar(login, senha);
     while(usuario == nullptr) {
         std::cout << "Credenciais incorretas.\nTente novamente:\n";
         std::cout << "Login: ";
         std::getline(std::cin, login);
         std::cout << "Senha: ";
         std::getline(std::cin, senha);
-        usuario = loginManager.autenticar(login, senha);
+        usuario = loginManager->autenticar(login, senha);
     }
+
+    telaInicial(usuario, loginManager, clienteManager, usuarioManager);
     
-    telaInicial(usuario);
     return 0;
 }

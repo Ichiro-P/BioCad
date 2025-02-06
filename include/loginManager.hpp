@@ -10,7 +10,7 @@ class LoginManager {
 private:
     std::unique_ptr<UsuarioDAO> usuarioDAO;
 public:
-    LoginManager(UsuarioDAO* dao) : usuarioDAO(dao) {}
+    LoginManager(std::unique_ptr<UsuarioDAO> dao) : usuarioDAO(std::move(dao)) {}
     
     std::shared_ptr<Usuario> autenticar(const std::string &login, const std::string &senha);
 };

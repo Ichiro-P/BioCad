@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <vector>
 
@@ -30,10 +29,10 @@ public:
     std::string getNome() const { return nome; }
     TipoUsuario getTipo() const { return tipo; }
 
-    void setLogin(const std::string& str) { this->login = login; }
-    void setSenha(const std::string& str) { this->senha = senha; }
-    void setNome(const std::string& str) { this->nome = nome; }
-    void setTipo() { this->tipo = tipo; }
+    void setLogin(const std::string& novoLogin) { login = novoLogin; }
+    void setSenha(const std::string& novaSenha) { senha = novaSenha; }
+    void setNome(const std::string& novoNome) { nome = novoNome; }
+    void setTipo(TipoUsuario novoTipo) { tipo = novoTipo; }
     
     virtual std::vector<std::string> getInterfaceOptions() const = 0;
 };

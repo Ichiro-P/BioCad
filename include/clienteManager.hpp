@@ -8,9 +8,9 @@
 
 class ClienteManager {
 private:
-    ClienteDAO* clienteDAO;
+    std::unique_ptr<ClienteDAO> clienteDAO;
 public:
-    ClienteManager(ClienteDAO* dao) : clienteDAO(dao) { }
+    ClienteManager(std::unique_ptr<ClienteDAO> dao) : clienteDAO(std::move(dao)) { }
 
     void cadastrarCliente(const Cliente &cliente) {
         if (cliente.getNome().empty())

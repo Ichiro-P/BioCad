@@ -11,13 +11,13 @@
 
 class UsuarioManager {
 private:
-    UsuarioDAO* usuarioDAO;
+    std::unique_ptr<UsuarioDAO> usuarioDAO;
 public:
-    UsuarioManager(UsuarioDAO* dao) : usuarioDAO(dao) { }
+    UsuarioManager(std::unique_ptr<UsuarioDAO> dao) : usuarioDAO(std::move(dao)) { }
 
     void cadastrarUsuario(const std::shared_ptr<Usuario> usuario) {
         if (usuario->getNome().empty())
-            throw std::invalid_argument("Nome do cliente não pode ser vazio");
+            throw std::invalid_argument("Nome do cliente nao pode ser vazio");
         if (!usuarioDAO->adicionar(usuario))
             throw std::runtime_error("Falha ao cadastrar cliente");
     }
