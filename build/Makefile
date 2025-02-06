@@ -129,125 +129,29 @@ BioCad/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/build
 .PHONY : BioCad/fast
 
-src/atendente.obj: src/atendente.cpp.obj
-.PHONY : src/atendente.obj
+src/clienteDAO.obj: src/clienteDAO.cpp.obj
+.PHONY : src/clienteDAO.obj
 
 # target to build an object file
-src/atendente.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/atendente.cpp.obj
-.PHONY : src/atendente.cpp.obj
+src/clienteDAO.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj
+.PHONY : src/clienteDAO.cpp.obj
 
-src/atendente.i: src/atendente.cpp.i
-.PHONY : src/atendente.i
-
-# target to preprocess a source file
-src/atendente.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/atendente.cpp.i
-.PHONY : src/atendente.cpp.i
-
-src/atendente.s: src/atendente.cpp.s
-.PHONY : src/atendente.s
-
-# target to generate assembly for a file
-src/atendente.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/atendente.cpp.s
-.PHONY : src/atendente.cpp.s
-
-src/cliente.obj: src/cliente.cpp.obj
-.PHONY : src/cliente.obj
-
-# target to build an object file
-src/cliente.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/cliente.cpp.obj
-.PHONY : src/cliente.cpp.obj
-
-src/cliente.i: src/cliente.cpp.i
-.PHONY : src/cliente.i
+src/clienteDAO.i: src/clienteDAO.cpp.i
+.PHONY : src/clienteDAO.i
 
 # target to preprocess a source file
-src/cliente.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/cliente.cpp.i
-.PHONY : src/cliente.cpp.i
+src/clienteDAO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDAO.cpp.i
+.PHONY : src/clienteDAO.cpp.i
 
-src/cliente.s: src/cliente.cpp.s
-.PHONY : src/cliente.s
-
-# target to generate assembly for a file
-src/cliente.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/cliente.cpp.s
-.PHONY : src/cliente.cpp.s
-
-src/dados.obj: src/dados.cpp.obj
-.PHONY : src/dados.obj
-
-# target to build an object file
-src/dados.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.obj
-.PHONY : src/dados.cpp.obj
-
-src/dados.i: src/dados.cpp.i
-.PHONY : src/dados.i
-
-# target to preprocess a source file
-src/dados.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.i
-.PHONY : src/dados.cpp.i
-
-src/dados.s: src/dados.cpp.s
-.PHONY : src/dados.s
+src/clienteDAO.s: src/clienteDAO.cpp.s
+.PHONY : src/clienteDAO.s
 
 # target to generate assembly for a file
-src/dados.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/dados.cpp.s
-.PHONY : src/dados.cpp.s
-
-src/gerente.obj: src/gerente.cpp.obj
-.PHONY : src/gerente.obj
-
-# target to build an object file
-src/gerente.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/gerente.cpp.obj
-.PHONY : src/gerente.cpp.obj
-
-src/gerente.i: src/gerente.cpp.i
-.PHONY : src/gerente.i
-
-# target to preprocess a source file
-src/gerente.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/gerente.cpp.i
-.PHONY : src/gerente.cpp.i
-
-src/gerente.s: src/gerente.cpp.s
-.PHONY : src/gerente.s
-
-# target to generate assembly for a file
-src/gerente.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/gerente.cpp.s
-.PHONY : src/gerente.cpp.s
-
-src/hashes.obj: src/hashes.cpp.obj
-.PHONY : src/hashes.obj
-
-# target to build an object file
-src/hashes.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.obj
-.PHONY : src/hashes.cpp.obj
-
-src/hashes.i: src/hashes.cpp.i
-.PHONY : src/hashes.i
-
-# target to preprocess a source file
-src/hashes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.i
-.PHONY : src/hashes.cpp.i
-
-src/hashes.s: src/hashes.cpp.s
-.PHONY : src/hashes.s
-
-# target to generate assembly for a file
-src/hashes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/hashes.cpp.s
-.PHONY : src/hashes.cpp.s
+src/clienteDAO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDAO.cpp.s
+.PHONY : src/clienteDAO.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -273,53 +177,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/personalTrainer.obj: src/personalTrainer.cpp.obj
-.PHONY : src/personalTrainer.obj
+src/usuarioDAO.obj: src/usuarioDAO.cpp.obj
+.PHONY : src/usuarioDAO.obj
 
 # target to build an object file
-src/personalTrainer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj
-.PHONY : src/personalTrainer.cpp.obj
+src/usuarioDAO.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj
+.PHONY : src/usuarioDAO.cpp.obj
 
-src/personalTrainer.i: src/personalTrainer.cpp.i
-.PHONY : src/personalTrainer.i
-
-# target to preprocess a source file
-src/personalTrainer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.i
-.PHONY : src/personalTrainer.cpp.i
-
-src/personalTrainer.s: src/personalTrainer.cpp.s
-.PHONY : src/personalTrainer.s
-
-# target to generate assembly for a file
-src/personalTrainer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/personalTrainer.cpp.s
-.PHONY : src/personalTrainer.cpp.s
-
-src/tela.obj: src/tela.cpp.obj
-.PHONY : src/tela.obj
-
-# target to build an object file
-src/tela.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.obj
-.PHONY : src/tela.cpp.obj
-
-src/tela.i: src/tela.cpp.i
-.PHONY : src/tela.i
+src/usuarioDAO.i: src/usuarioDAO.cpp.i
+.PHONY : src/usuarioDAO.i
 
 # target to preprocess a source file
-src/tela.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.i
-.PHONY : src/tela.cpp.i
+src/usuarioDAO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.i
+.PHONY : src/usuarioDAO.cpp.i
 
-src/tela.s: src/tela.cpp.s
-.PHONY : src/tela.s
+src/usuarioDAO.s: src/usuarioDAO.cpp.s
+.PHONY : src/usuarioDAO.s
 
 # target to generate assembly for a file
-src/tela.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/tela.cpp.s
-.PHONY : src/tela.cpp.s
+src/usuarioDAO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.s
+.PHONY : src/usuarioDAO.cpp.s
 
 # Help Target
 help:
@@ -330,30 +210,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BioCad
-	@echo ... src/atendente.obj
-	@echo ... src/atendente.i
-	@echo ... src/atendente.s
-	@echo ... src/cliente.obj
-	@echo ... src/cliente.i
-	@echo ... src/cliente.s
-	@echo ... src/dados.obj
-	@echo ... src/dados.i
-	@echo ... src/dados.s
-	@echo ... src/gerente.obj
-	@echo ... src/gerente.i
-	@echo ... src/gerente.s
-	@echo ... src/hashes.obj
-	@echo ... src/hashes.i
-	@echo ... src/hashes.s
+	@echo ... src/clienteDAO.obj
+	@echo ... src/clienteDAO.i
+	@echo ... src/clienteDAO.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/personalTrainer.obj
-	@echo ... src/personalTrainer.i
-	@echo ... src/personalTrainer.s
-	@echo ... src/tela.obj
-	@echo ... src/tela.i
-	@echo ... src/tela.s
+	@echo ... src/usuarioDAO.obj
+	@echo ... src/usuarioDAO.i
+	@echo ... src/usuarioDAO.s
 .PHONY : help
 
 

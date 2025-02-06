@@ -68,12 +68,7 @@
 			[
 				0,
 				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7
+				2
 			]
 		}
 	],
@@ -112,12 +107,7 @@
 			[
 				0,
 				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7
+				2
 			]
 		}
 	],
@@ -126,31 +116,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/atendente.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/cliente.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/dados.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/gerente.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/hashes.cpp",
+			"path" : "src/clienteDAO.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -162,13 +128,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/personalTrainer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/tela.cpp",
+			"path" : "src/usuarioDAO.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

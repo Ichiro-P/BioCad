@@ -1,47 +1,62 @@
+#include <loginManager.hpp>
+#include <clienteManager.hpp>
+#include <clienteDAO.hpp>
+#include <usuarioDAO.hpp>
+#include <clienteDVO.hpp>
+#include <usuarioDVO.hpp>
+
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <memory>
 #include <vector>
-#include <array>
-
-
-#include <tela.hpp>
-#include <gerente.hpp>
-#include <atendente.hpp>
-#include <personalTrainer.hpp>
-#include <cliente.hpp>
-#include <dados.hpp>
+#include <string>
 
 int main() {
-    dados Dados;
 
-    std::string id;
-    std::string senha;
-
-    tela telaSistema;
+    auto usuarioDao = std::make_unique<UsuarioDAO>();
+    LoginManager loginManager(usuarioDao.release());
     
-    telaSistema.telaInicial(id, senha);
+    std::string login, senha;
+    
+    std::cout << "Bem-vindo ao sistema BioCad\n";
+    std::cout << "Login: ";
+    std::getline(std::cin, login);
+    std::cout << "Senha: ";
+    std::getline(std::cin, senha);
+    
+    try {
 
-    gerente Gerente = gerente(id, senha);
-    atendente Atendente = atendente(id, senha);
-    personalTrainer PersonalTrainer = personalTrainer(id, senha);
+        std::shared_ptr<Usuario> usuario = loginManager.autenticar(login, senha);
+        std::cout << "Bem-vindo, " << usuario->getNome() << "!" << std::endl;
+        
 
-    Gerente.validarGerente();
-    Atendente.validarAtendente();
-    PersonalTrainer.validarPersonalTrainer();
+        std::vector<std::string> opcoes = usuario->getInterfaceOptions();
+        std::cout << "Opções disponíveis:" << std::endl;
+        for (const auto &opcao : opcoes)
+            std::cout << opcao << std::endl;
+        
 
-    while(!Gerente.getAcesso() && !Atendente.getAcesso() && !PersonalTrainer.getAcesso()) {
-        telaSistema.telaNegado(id, senha);
+        if (usuario->getTipo() == TipoUsuario::ATENDENTE ||
+            usuario->getTipo() == TipoUsuario::GERENTE) {
+            auto clienteDao = std::make_unique<ClienteDAO>();
+            ClienteManager clienteManager(clienteDao.get());
 
+            Cliente novoCliente(100, "Maria Souza", "maria@exemplo.com");
+            
 
-        Gerente = gerente(id, senha);
-        Atendente = atendente(id, senha);
-        PersonalTrainer = personalTrainer(id, senha);
+            clienteManager.cadastrarCliente(novoCliente);
+            std::cout << "Cliente cadastrado: " << novoCliente.getNome() << std::endl;
+            
 
-        Gerente.validarGerente();
-        Atendente.validarAtendente();
-        PersonalTrainer.validarPersonalTrainer();
+            std::vector<Cliente> clientes = clienteManager.listarClientes();
+            std::cout << "Clientes cadastrados:" << std::endl;
+            for (const auto &c : clientes)
+                std::cout << "ID: " << c.getId() << " - " << c.getNome() << std::endl;
+        }
+        
+    } catch (const std::exception &ex) {
+        std::cerr << "Erro: " << ex.what() << std::endl;
+        return 1;
     }
-    telaSistema.telaAcesso(Gerente, Atendente, PersonalTrainer, Dados);
+    
     return 0;
 }

@@ -68,86 +68,26 @@ include CMakeFiles/BioCad.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/BioCad.dir/flags.make
 
-CMakeFiles/BioCad.dir/src/atendente.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/atendente.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/atendente.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/atendente.cpp
-CMakeFiles/BioCad.dir/src/atendente.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BioCad.dir/src/atendente.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/atendente.cpp.obj -MF CMakeFiles\BioCad.dir\src\atendente.cpp.obj.d -o CMakeFiles\BioCad.dir\src\atendente.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\atendente.cpp
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj: CMakeFiles/BioCad.dir/flags.make
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/clienteDAO.cpp
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj -MF CMakeFiles\BioCad.dir\src\clienteDAO.cpp.obj.d -o CMakeFiles\BioCad.dir\src\clienteDAO.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\clienteDAO.cpp
 
-CMakeFiles/BioCad.dir/src/atendente.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/atendente.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\atendente.cpp > CMakeFiles\BioCad.dir\src\atendente.cpp.i
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/clienteDAO.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\clienteDAO.cpp > CMakeFiles\BioCad.dir\src\clienteDAO.cpp.i
 
-CMakeFiles/BioCad.dir/src/atendente.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/atendente.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\atendente.cpp -o CMakeFiles\BioCad.dir\src\atendente.cpp.s
-
-CMakeFiles/BioCad.dir/src/cliente.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/cliente.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/cliente.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/cliente.cpp
-CMakeFiles/BioCad.dir/src/cliente.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BioCad.dir/src/cliente.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/cliente.cpp.obj -MF CMakeFiles\BioCad.dir\src\cliente.cpp.obj.d -o CMakeFiles\BioCad.dir\src\cliente.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\cliente.cpp
-
-CMakeFiles/BioCad.dir/src/cliente.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/cliente.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\cliente.cpp > CMakeFiles\BioCad.dir\src\cliente.cpp.i
-
-CMakeFiles/BioCad.dir/src/cliente.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/cliente.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\cliente.cpp -o CMakeFiles\BioCad.dir\src\cliente.cpp.s
-
-CMakeFiles/BioCad.dir/src/dados.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/dados.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/dados.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/dados.cpp
-CMakeFiles/BioCad.dir/src/dados.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BioCad.dir/src/dados.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/dados.cpp.obj -MF CMakeFiles\BioCad.dir\src\dados.cpp.obj.d -o CMakeFiles\BioCad.dir\src\dados.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\dados.cpp
-
-CMakeFiles/BioCad.dir/src/dados.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/dados.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\dados.cpp > CMakeFiles\BioCad.dir\src\dados.cpp.i
-
-CMakeFiles/BioCad.dir/src/dados.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/dados.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\dados.cpp -o CMakeFiles\BioCad.dir\src\dados.cpp.s
-
-CMakeFiles/BioCad.dir/src/gerente.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/gerente.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/gerente.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/gerente.cpp
-CMakeFiles/BioCad.dir/src/gerente.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BioCad.dir/src/gerente.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/gerente.cpp.obj -MF CMakeFiles\BioCad.dir\src\gerente.cpp.obj.d -o CMakeFiles\BioCad.dir\src\gerente.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\gerente.cpp
-
-CMakeFiles/BioCad.dir/src/gerente.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/gerente.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\gerente.cpp > CMakeFiles\BioCad.dir\src\gerente.cpp.i
-
-CMakeFiles/BioCad.dir/src/gerente.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/gerente.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\gerente.cpp -o CMakeFiles\BioCad.dir\src\gerente.cpp.s
-
-CMakeFiles/BioCad.dir/src/hashes.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/hashes.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/hashes.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/hashes.cpp
-CMakeFiles/BioCad.dir/src/hashes.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BioCad.dir/src/hashes.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/hashes.cpp.obj -MF CMakeFiles\BioCad.dir\src\hashes.cpp.obj.d -o CMakeFiles\BioCad.dir\src\hashes.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\hashes.cpp
-
-CMakeFiles/BioCad.dir/src/hashes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/hashes.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\hashes.cpp > CMakeFiles\BioCad.dir\src\hashes.cpp.i
-
-CMakeFiles/BioCad.dir/src/hashes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/hashes.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\hashes.cpp -o CMakeFiles\BioCad.dir\src\hashes.cpp.s
+CMakeFiles/BioCad.dir/src/clienteDAO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/clienteDAO.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\clienteDAO.cpp -o CMakeFiles\BioCad.dir\src\clienteDAO.cpp.s
 
 CMakeFiles/BioCad.dir/src/main.cpp.obj: CMakeFiles/BioCad.dir/flags.make
 CMakeFiles/BioCad.dir/src/main.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
 CMakeFiles/BioCad.dir/src/main.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/main.cpp
 CMakeFiles/BioCad.dir/src/main.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BioCad.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BioCad.dir/src/main.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/main.cpp.obj -MF CMakeFiles\BioCad.dir\src\main.cpp.obj.d -o CMakeFiles\BioCad.dir\src\main.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\main.cpp
 
 CMakeFiles/BioCad.dir/src/main.cpp.i: cmake_force
@@ -158,63 +98,38 @@ CMakeFiles/BioCad.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/main.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\main.cpp -o CMakeFiles\BioCad.dir\src\main.cpp.s
 
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/personalTrainer.cpp
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj -MF CMakeFiles\BioCad.dir\src\personalTrainer.cpp.obj.d -o CMakeFiles\BioCad.dir\src\personalTrainer.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\personalTrainer.cpp
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj: CMakeFiles/BioCad.dir/flags.make
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/usuarioDAO.cpp
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj -MF CMakeFiles\BioCad.dir\src\usuarioDAO.cpp.obj.d -o CMakeFiles\BioCad.dir\src\usuarioDAO.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\usuarioDAO.cpp
 
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/personalTrainer.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\personalTrainer.cpp > CMakeFiles\BioCad.dir\src\personalTrainer.cpp.i
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\usuarioDAO.cpp > CMakeFiles\BioCad.dir\src\usuarioDAO.cpp.i
 
-CMakeFiles/BioCad.dir/src/personalTrainer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/personalTrainer.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\personalTrainer.cpp -o CMakeFiles\BioCad.dir\src\personalTrainer.cpp.s
-
-CMakeFiles/BioCad.dir/src/tela.cpp.obj: CMakeFiles/BioCad.dir/flags.make
-CMakeFiles/BioCad.dir/src/tela.cpp.obj: CMakeFiles/BioCad.dir/includes_CXX.rsp
-CMakeFiles/BioCad.dir/src/tela.cpp.obj: C:/Users/itiro/Documentos/BioCad/src/tela.cpp
-CMakeFiles/BioCad.dir/src/tela.cpp.obj: CMakeFiles/BioCad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BioCad.dir/src/tela.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BioCad.dir/src/tela.cpp.obj -MF CMakeFiles\BioCad.dir\src\tela.cpp.obj.d -o CMakeFiles\BioCad.dir\src\tela.cpp.obj -c C:\Users\itiro\Documentos\BioCad\src\tela.cpp
-
-CMakeFiles/BioCad.dir/src/tela.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BioCad.dir/src/tela.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\itiro\Documentos\BioCad\src\tela.cpp > CMakeFiles\BioCad.dir\src\tela.cpp.i
-
-CMakeFiles/BioCad.dir/src/tela.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/tela.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\tela.cpp -o CMakeFiles\BioCad.dir\src\tela.cpp.s
+CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\itiro\Documentos\BioCad\src\usuarioDAO.cpp -o CMakeFiles\BioCad.dir\src\usuarioDAO.cpp.s
 
 # Object files for target BioCad
 BioCad_OBJECTS = \
-"CMakeFiles/BioCad.dir/src/atendente.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/cliente.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/dados.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/gerente.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/hashes.cpp.obj" \
+"CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj" \
 "CMakeFiles/BioCad.dir/src/main.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj" \
-"CMakeFiles/BioCad.dir/src/tela.cpp.obj"
+"CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj"
 
 # External object files for target BioCad
 BioCad_EXTERNAL_OBJECTS =
 
-BioCad.exe: CMakeFiles/BioCad.dir/src/atendente.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/cliente.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/dados.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/gerente.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/hashes.cpp.obj
+BioCad.exe: CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj
 BioCad.exe: CMakeFiles/BioCad.dir/src/main.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/personalTrainer.cpp.obj
-BioCad.exe: CMakeFiles/BioCad.dir/src/tela.cpp.obj
+BioCad.exe: CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj
 BioCad.exe: CMakeFiles/BioCad.dir/build.make
 BioCad.exe: CMakeFiles/BioCad.dir/linkLibs.rsp
 BioCad.exe: CMakeFiles/BioCad.dir/objects1.rsp
 BioCad.exe: CMakeFiles/BioCad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable BioCad.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\itiro\Documentos\BioCad\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable BioCad.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BioCad.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
