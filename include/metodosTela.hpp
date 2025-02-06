@@ -14,8 +14,8 @@
 #include <string>
 #include <limits>
 
-static int contadorId = 5;
-static int contadorIdUsuarios = 3;
+static int contadorId = 6;
+static int contadorIdUsuarios = 4;
 
 void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
@@ -247,7 +247,7 @@ void telaCadastrarCliente(std::shared_ptr<Usuario> usuario,
     std::cout << "Informe o endereco do cliente: ";
     std::getline(std::cin, enderecoCliente);
 
-    Cliente novoCliente(contadorId++, nomeCliente, cpfCliente, enderecoCliente, telefoneCliente);
+    Cliente novoCliente(contadorId++, nomeCliente, cpfCliente, enderecoCliente, telefoneCliente, "01/01/2001", "01/01/2025");
     clienteManager->cadastrarCliente(novoCliente);
     std::cout << "Cliente cadastrado: " << novoCliente.getNome() << '\n';
 

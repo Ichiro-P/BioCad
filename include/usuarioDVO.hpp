@@ -9,7 +9,6 @@ enum class TipoUsuario {
 };
 
 class Usuario {
-protected:
     int id;
     std::string login;
     std::string senha;
