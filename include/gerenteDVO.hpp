@@ -10,10 +10,13 @@ public:
         
     virtual std::vector<std::string> getInterfaceOptions() const override {
         return {
-            "1 - Gerenciar Funcionários",
-            "2 - Gerar Relatórios Financeiros",
-            "3 - Controlar Acesso e Cadastros",
-            "4 - Configurar Sistema"
+            "1 - Listar clientes;\n",
+            "2 - Cadastrar cliente;\n",
+            "3 - Listar atendentes;\n",
+            "4 - Cadastrar atendente;\n",
+            "5 - Listar personal trainers;\n",
+            "6 - Cadastrar personal trainer;\n",
+            "0 - Sair.\n"
         };
     }
 };

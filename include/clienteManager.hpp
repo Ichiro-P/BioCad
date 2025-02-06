@@ -21,7 +21,7 @@ public:
     
     Cliente obterCliente(int id) {
         Cliente c = clienteDAO->buscar(id);
-        if (c.getId() == 0)
+        if (c.getId() == INT_MIN)
             throw std::runtime_error("Cliente não encontrado");
         return c;
     }

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "BioCad.pdb"
   "CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj"
   "CMakeFiles/BioCad.dir/src/clienteDAO.cpp.obj.d"
+  "CMakeFiles/BioCad.dir/src/loginManager.cpp.obj"
+  "CMakeFiles/BioCad.dir/src/loginManager.cpp.obj.d"
   "CMakeFiles/BioCad.dir/src/main.cpp.obj"
   "CMakeFiles/BioCad.dir/src/main.cpp.obj.d"
   "CMakeFiles/BioCad.dir/src/usuarioDAO.cpp.obj"

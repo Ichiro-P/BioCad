@@ -6,6 +6,7 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/itiro/Documentos/BioCad/src/*.cpp")
 set(OLD_GLOB
   "C:/Users/itiro/Documentos/BioCad/src/clienteDAO.cpp"
+  "C:/Users/itiro/Documentos/BioCad/src/loginManager.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/main.cpp"
   "C:/Users/itiro/Documentos/BioCad/src/usuarioDAO.cpp"
   )

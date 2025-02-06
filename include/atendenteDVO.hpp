@@ -8,9 +8,9 @@ public:
         
     virtual std::vector<std::string> getInterfaceOptions() const override {
         return {
-            "1 - Cadastrar Cliente",
-            "2 - Agendar Aula",
-            "3 - Consultar Clientes"
+            "1 - Listar clientes;\n",
+            "2 - Cadastrar cliente;\n",
+            "0 - Sair.\n"
         };
     }
 };

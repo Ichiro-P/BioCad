@@ -7,6 +7,12 @@
 },
 {
   "directory": "C:/Users/itiro/Documentos/BioCad/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\loginManager.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\loginManager.cpp",
+  "file": "C:/Users/itiro/Documentos/BioCad/src/loginManager.cpp",
+  "output": "CMakeFiles/BioCad.dir/src/loginManager.cpp.obj"
+},
+{
+  "directory": "C:/Users/itiro/Documentos/BioCad/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/BioCad.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles\\BioCad.dir\\src\\main.cpp.obj -c C:\\Users\\itiro\\Documentos\\BioCad\\src\\main.cpp",
   "file": "C:/Users/itiro/Documentos/BioCad/src/main.cpp",
   "output": "CMakeFiles/BioCad.dir/src/main.cpp.obj"

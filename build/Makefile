@@ -153,6 +153,30 @@ src/clienteDAO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDAO.cpp.s
 .PHONY : src/clienteDAO.cpp.s
 
+src/loginManager.obj: src/loginManager.cpp.obj
+.PHONY : src/loginManager.obj
+
+# target to build an object file
+src/loginManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/loginManager.cpp.obj
+.PHONY : src/loginManager.cpp.obj
+
+src/loginManager.i: src/loginManager.cpp.i
+.PHONY : src/loginManager.i
+
+# target to preprocess a source file
+src/loginManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/loginManager.cpp.i
+.PHONY : src/loginManager.cpp.i
+
+src/loginManager.s: src/loginManager.cpp.s
+.PHONY : src/loginManager.s
+
+# target to generate assembly for a file
+src/loginManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/loginManager.cpp.s
+.PHONY : src/loginManager.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -213,6 +237,9 @@ help:
 	@echo ... src/clienteDAO.obj
 	@echo ... src/clienteDAO.i
 	@echo ... src/clienteDAO.s
+	@echo ... src/loginManager.obj
+	@echo ... src/loginManager.i
+	@echo ... src/loginManager.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
