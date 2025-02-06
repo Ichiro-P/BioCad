@@ -9,7 +9,7 @@ private:
     std::string endereco;
     std::string telefone;
 public:
-    Cliente() : id(INT_MIN), nome(""), cpf(""), endereco(""), telefone("") {}
+    Cliente() : id(-1), nome(""), cpf(""), endereco(""), telefone("") {}
     Cliente(int id, const std::string &nome, const std::string &cpf, const std::string &endereco, const std::string &telefone) : id(id), nome(nome), cpf(cpf), telefone(telefone), endereco(endereco) { }
     
 
