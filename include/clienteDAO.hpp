@@ -1,16 +1,17 @@
 #pragma once
 #include <clienteDVO.hpp>
 #include <vector>
+#include <memory>
 
 class ClienteDAO {
 private:
-    std::vector<Cliente> clientes;
+    std::vector<std::shared_ptr<Cliente>> clientes;
 public:
-    ClienteDAO();
+    ClienteDAO(const std::vector<std::shared_ptr<Cliente>>& vetorClientes);
 
-    bool adicionar(const Cliente &cliente);
-    bool atualizar(const Cliente &cliente);
+    bool adicionar(std::shared_ptr<Cliente> cliente);
+    bool atualizar(std::shared_ptr<Cliente> cliente);
     bool remover(int id);
-    Cliente buscar(int id);
-    std::vector<Cliente> listar();
+    std::shared_ptr<Cliente> buscar(int id);
+    std::vector<std::shared_ptr<Cliente>> listar();
 };

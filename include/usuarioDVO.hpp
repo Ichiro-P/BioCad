@@ -33,5 +33,5 @@ public:
     void setNome(const std::string& novoNome) { nome = novoNome; }
     void setTipo(TipoUsuario novoTipo) { tipo = novoTipo; }
     
-    virtual std::vector<std::string> getInterfaceOptions() const = 0;
+    virtual std::vector<std::string> getInterfaceOptions() const { return {"achou que teria algo"}; };
 };

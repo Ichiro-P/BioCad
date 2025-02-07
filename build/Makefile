@@ -153,6 +153,30 @@ src/clienteDAO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDAO.cpp.s
 .PHONY : src/clienteDAO.cpp.s
 
+src/clienteDVO.obj: src/clienteDVO.cpp.obj
+.PHONY : src/clienteDVO.obj
+
+# target to build an object file
+src/clienteDVO.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDVO.cpp.obj
+.PHONY : src/clienteDVO.cpp.obj
+
+src/clienteDVO.i: src/clienteDVO.cpp.i
+.PHONY : src/clienteDVO.i
+
+# target to preprocess a source file
+src/clienteDVO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDVO.cpp.i
+.PHONY : src/clienteDVO.cpp.i
+
+src/clienteDVO.s: src/clienteDVO.cpp.s
+.PHONY : src/clienteDVO.s
+
+# target to generate assembly for a file
+src/clienteDVO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/clienteDVO.cpp.s
+.PHONY : src/clienteDVO.cpp.s
+
 src/loginManager.obj: src/loginManager.cpp.obj
 .PHONY : src/loginManager.obj
 
@@ -201,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/telaManager.obj: src/telaManager.cpp.obj
+.PHONY : src/telaManager.obj
+
+# target to build an object file
+src/telaManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/telaManager.cpp.obj
+.PHONY : src/telaManager.cpp.obj
+
+src/telaManager.i: src/telaManager.cpp.i
+.PHONY : src/telaManager.i
+
+# target to preprocess a source file
+src/telaManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/telaManager.cpp.i
+.PHONY : src/telaManager.cpp.i
+
+src/telaManager.s: src/telaManager.cpp.s
+.PHONY : src/telaManager.s
+
+# target to generate assembly for a file
+src/telaManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BioCad.dir\build.make CMakeFiles/BioCad.dir/src/telaManager.cpp.s
+.PHONY : src/telaManager.cpp.s
+
 src/usuarioDAO.obj: src/usuarioDAO.cpp.obj
 .PHONY : src/usuarioDAO.obj
 
@@ -237,12 +285,18 @@ help:
 	@echo ... src/clienteDAO.obj
 	@echo ... src/clienteDAO.i
 	@echo ... src/clienteDAO.s
+	@echo ... src/clienteDVO.obj
+	@echo ... src/clienteDVO.i
+	@echo ... src/clienteDVO.s
 	@echo ... src/loginManager.obj
 	@echo ... src/loginManager.i
 	@echo ... src/loginManager.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/telaManager.obj
+	@echo ... src/telaManager.i
+	@echo ... src/telaManager.s
 	@echo ... src/usuarioDAO.obj
 	@echo ... src/usuarioDAO.i
 	@echo ... src/usuarioDAO.s

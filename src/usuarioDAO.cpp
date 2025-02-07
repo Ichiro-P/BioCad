@@ -5,10 +5,10 @@
 
 #include <algorithm>
 
-UsuarioDAO::UsuarioDAO() {
-    usuarios.push_back(std::make_shared<Atendente>(1, "eduardo", "maromba", "Eduardo"));
-    usuarios.push_back(std::make_shared<PersonalTrainer>(2, "suteam", "mateus", "Matheus Vinicius"));
-    usuarios.push_back(std::make_shared<Gerente>(3, "root", "root", "Administrador"));
+UsuarioDAO::UsuarioDAO(std::vector<std::shared_ptr<Usuario>>& vetorUsuarios) {
+    for(const auto& it: vetorUsuarios) {
+        usuarios.push_back(it);
+    }
 }
 
 std::shared_ptr<Usuario> UsuarioDAO::buscarPorLogin(const std::string &login) {

@@ -11,9 +11,9 @@
 
 class UsuarioManager {
 private:
-    std::unique_ptr<UsuarioDAO> usuarioDAO;
+    std::shared_ptr<UsuarioDAO> usuarioDAO;
 public:
-    UsuarioManager(std::unique_ptr<UsuarioDAO> dao) : usuarioDAO(std::move(dao)) { }
+    UsuarioManager(std::shared_ptr<UsuarioDAO> dao) : usuarioDAO(dao) { }
 
     void cadastrarUsuario(const std::shared_ptr<Usuario> usuario) {
         if (usuario->getNome().empty())
