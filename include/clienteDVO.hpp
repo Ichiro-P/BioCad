@@ -49,9 +49,9 @@ class Mensalidade {
     float getValor() const { return valor; };
     Status getStatus() const { return status; };
 
-    void setDataVencimentoRelativa(int novaDuracao) { this->dataVencimentoRelativa = novaDuracao; };
-    void setValor(float novoValor) { this->valor = novoValor; };
-    void setStatus(const Status& novoStatus) { this->status = novoStatus; };
+    void setDataVencimentoRelativa(int novaDuracao) { dataVencimentoRelativa = novaDuracao; };
+    void setValor(float novoValor) { valor = novoValor; };
+    void setStatus(const Status& novoStatus) { status = novoStatus; };
 };
 
 class Plano {
@@ -79,7 +79,13 @@ class Contrato {
 
     void mensalidadesNaoPagas();
     Plano getPlanoVigente() const { return planoVigente; };
-    void pagarMensalidade(int index) { mensalidades[index].setStatus(Status::PAGO); };
+    bool pagarMensalidade(int index) {
+        if (index < 0 || index >= static_cast<int>(mensalidades.size())) {
+            return false;
+        }
+        mensalidades[index].setStatus(Status::PAGO);
+        return true;
+    }
 
     void setPlanoVigente(const Plano& novoPlano) { planoVigente = novoPlano; };
     
@@ -99,7 +105,8 @@ private:
 public:
     Cliente() : id(-1), nome(""), cpf(""), endereco(""), telefone(""), dataNascimento(""), dataCadastro(""), contratoVigente(Contrato()), planoDeTreino(Treino()) {}
     Cliente(int id, const std::string &nome, const std::string &cpf, const std::string &endereco, const std::string &telefone, const std::string &dataNascimento, const std::string &dataCadastro, const Contrato& contratoVigente = Contrato(), const Treino& planodeTreino = Treino())
-     : id(id), nome(nome), cpf(cpf), telefone(telefone), endereco(endereco), dataNascimento(dataNascimento), dataCadastro(dataCadastro), contratoVigente(contratoVigente), planoDeTreino(Treino()) { }
+     : id(id), nome(nome), cpf(cpf), telefone(telefone), endereco(endereco), dataNascimento(dataNascimento), dataCadastro(dataCadastro), contratoVigente(contratoVigente), planoDeTreino(planodeTreino) { }
+
     
     virtual ~Cliente() = default;
 
