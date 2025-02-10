@@ -9,7 +9,7 @@ class UsuarioDAO {
 private:
     std::vector<std::shared_ptr<Usuario>> usuarios;
 public:
-    UsuarioDAO(std::vector<std::shared_ptr<Usuario>>& vetorUsuarios);
+    UsuarioDAO(std::vector<std::shared_ptr<Usuario>>& vetorUsuarios) : usuarios(vetorUsuarios) {};
     std::shared_ptr<Usuario> buscarPorLogin(const std::string &login);
     std::shared_ptr<Usuario> buscarPorId(int id);
 

@@ -5,12 +5,6 @@
 
 #include <algorithm>
 
-UsuarioDAO::UsuarioDAO(std::vector<std::shared_ptr<Usuario>>& vetorUsuarios) {
-    for(const auto& it: vetorUsuarios) {
-        usuarios.push_back(it);
-    }
-}
-
 std::shared_ptr<Usuario> UsuarioDAO::buscarPorLogin(const std::string &login) {
     for (auto &u : usuarios) {
         if (u->getLogin() == login)
