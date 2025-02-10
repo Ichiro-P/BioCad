@@ -444,7 +444,7 @@ CMakeFiles/BioCad.dir/src/main.cpp.obj
  C:/Users/itiro/Documentos/BioCad/include/gerenteDVO.hpp
  C:/Users/itiro/Documentos/BioCad/include/loginManager.hpp
  C:/Users/itiro/Documentos/BioCad/include/personalTrainerDVO.hpp
- C:/Users/itiro/Documentos/BioCad/include/telaManager.hpp
+ C:/Users/itiro/Documentos/BioCad/include/sistemaManager.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioDAO.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioDVO.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioManager.hpp
@@ -609,8 +609,8 @@ CMakeFiles/BioCad.dir/src/main.cpp.obj
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h
 
-CMakeFiles/BioCad.dir/src/telaManager.cpp.obj
- C:/Users/itiro/Documentos/BioCad/src/telaManager.cpp
+CMakeFiles/BioCad.dir/src/sistemaManager.cpp.obj
+ C:/Users/itiro/Documentos/BioCad/src/sistemaManager.cpp
  C:/Users/itiro/Documentos/BioCad/include/atendenteDVO.hpp
  C:/Users/itiro/Documentos/BioCad/include/clienteDAO.hpp
  C:/Users/itiro/Documentos/BioCad/include/clienteDVO.hpp
@@ -618,7 +618,7 @@ CMakeFiles/BioCad.dir/src/telaManager.cpp.obj
  C:/Users/itiro/Documentos/BioCad/include/gerenteDVO.hpp
  C:/Users/itiro/Documentos/BioCad/include/loginManager.hpp
  C:/Users/itiro/Documentos/BioCad/include/personalTrainerDVO.hpp
- C:/Users/itiro/Documentos/BioCad/include/telaManager.hpp
+ C:/Users/itiro/Documentos/BioCad/include/sistemaManager.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioDAO.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioDVO.hpp
  C:/Users/itiro/Documentos/BioCad/include/usuarioManager.hpp
