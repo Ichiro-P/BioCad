@@ -24,6 +24,11 @@ bool ClienteDAO::atualizar(std::shared_ptr<Cliente> cliente) {
     return false;
 }
 
+bool ClienteDAO::fazerCheckin(std::shared_ptr<Cliente> cliente) {
+    cliente->setCheckIn(cliente->getCheckIn() + 1);
+    return true;
+}
+
 bool ClienteDAO::remover(int id) {
     auto it = std::find_if(clientes.begin(), clientes.end(), [id](const std::shared_ptr<Cliente> c) {
         return c->getId() == id;

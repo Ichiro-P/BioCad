@@ -35,6 +35,10 @@ public:
         if (!clienteDAO->remover(id))
             throw std::runtime_error("Falha ao remover cliente");
     }
+
+    void checkInCliente(std::shared_ptr<Cliente> cliente) {
+        if(cliente->getCheckIn() < 2) cliente->setCheckIn(cliente->getCheckIn()+1);
+    }
     
     std::vector<std::shared_ptr<Cliente>> listarClientes() {
         return clienteDAO->listar();

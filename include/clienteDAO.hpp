@@ -11,6 +11,7 @@ public:
 
     bool adicionar(std::shared_ptr<Cliente> cliente);
     bool atualizar(std::shared_ptr<Cliente> cliente);
+    bool fazerCheckin(std::shared_ptr<Cliente> cliente);
     bool remover(int id);
     std::shared_ptr<Cliente> buscar(int id);
     std::vector<std::shared_ptr<Cliente>> listar();

@@ -1,6 +1,6 @@
 #include <sistemaManager.hpp>
 
-int contadorId = 6;
+int contadorId = 7;
 int contadorIdUsuarios = 4;
 
 
@@ -106,7 +106,8 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
         std::cout << "\n\nDetalhes do cliente:\n"
                   << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
                   << "\nCpf: " << cliente->getCpf() << "\nEndereco: " << cliente->getEndereco()
-                  << "\nTelefone: " << cliente->getTelefone() << "\n";
+                  << "\nTelefone: " << cliente->getTelefone() << '\n'
+                  << "\nCheck Ins: " << cliente->getCheckIn() << '\n';
 
         int acao = -1;
         while (true) {
@@ -114,6 +115,7 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
                       << "1 - Atualizar dados\n"
                       << "2 - Visualizar contrato\n"
                       << "3 - Remover cliente\n"
+                      << "4 - Atualizar Check In\n"
                       << "0 - Voltar\n"
                       << "Opcao: ";
             if (!(std::cin >> acao)) {
@@ -207,6 +209,9 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
                 clienteManager->removerCliente(cliente->getId());
                 std::cout << "Cliente removido com sucesso.\n";
                 break;
+            } else if (acao == 4) {
+                clienteManager->checkInCliente(cliente);
+                std::cout << "Check In atualizado com sucesso.\n";
             } else if (acao == 0) {
                 break;
             } else {
