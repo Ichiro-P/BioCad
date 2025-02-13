@@ -19,7 +19,7 @@ public:
             throw std::runtime_error("Falha ao cadastrar cliente");
     }
     
-    std::shared_ptr<Cliente> obterCliente(int id) {
+    std::shared_ptr<Cliente> getCliente(int id) {
         std::shared_ptr<Cliente> c = clienteDAO->buscar(id);
         if (c->getId() == -1)
             throw std::runtime_error("Cliente não encontrado");
@@ -37,7 +37,11 @@ public:
     }
 
     void checkInCliente(std::shared_ptr<Cliente> cliente) {
-        if(cliente->getCheckIn() < 2) cliente->setCheckIn(cliente->getCheckIn()+1);
+        if(cliente->getCheckIns() < 2) cliente->setCheckIns(cliente->getCheckIns()+1);
+    }
+
+    void checkOutCliente(std::shared_ptr<Cliente> cliente) {
+        if(cliente->getCheckOuts() < 2) cliente->setCheckOuts(cliente->getCheckOuts()+1);
     }
     
     std::vector<std::shared_ptr<Cliente>> listarClientes() {

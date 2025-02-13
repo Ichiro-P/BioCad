@@ -4,6 +4,57 @@ int contadorId = 7;
 int contadorIdUsuarios = 4;
 
 
+void iniciarSistema() {
+    std::vector<std::shared_ptr<Cliente>> clientes {
+        std::make_shared<Cliente>(1, "Joao Silva", "123.456.789-00", "Rua A, 123", "(11) 98765-4321", "01/01/2001", "06/02/2025"),
+        std::make_shared<Cliente>(2, "Maria Oliveira", "987.654.321-00", "Rua B, 456", "(11) 91234-5678", "02/01/2001", "02/02/2025"),
+        std::make_shared<Cliente>(3, "Carlos Santos", "111.222.333-44", "Av. C, 789", "(11) 99876-5432", "10/01/2001", "06/02/2025"),
+        std::make_shared<Cliente>(4, "Ana Paula", "555.666.777-88", "Rua D, 101", "(11) 90000-0000", "01/10/2001", "06/12/2025"),
+        std::make_shared<Cliente>(5, "Mariana Costa", "999.888.777-66", "Av. E, 202", "(11) 91111-2222", "01/01/2001", "06/02/2025"),
+        std::make_shared<Cliente>(6, "Reginaldo Afonso Padilha", "403.020.123-90", "Av. W 210", "(11) 91111-2222", "01/01/2001", "07/02/2025")
+    };
+
+    Atendente eduardo(1, "eduardo", "maromba", "Eduardo");
+    PersonalTrainer suteam(2, "suteam", "mateus", "Matheus Vinicius");
+    Gerente root(3, "root", "root", "Administrador");
+
+    std::vector<std::shared_ptr<Usuario>> usuarios;
+    usuarios.push_back(std::make_shared<Atendente>(eduardo));
+    usuarios.push_back(std::make_shared<PersonalTrainer>(suteam));
+    usuarios.push_back(std::make_shared<Gerente>(root));
+
+    std::shared_ptr<UsuarioDAO> usuarioDAO = std::make_shared<UsuarioDAO>(UsuarioDAO(usuarios));
+    std::shared_ptr<LoginManager> loginManager = std::make_shared<LoginManager>(usuarioDAO);
+    std::shared_ptr<UsuarioManager> usuarioManager = std::make_shared<UsuarioManager>(usuarioDAO);
+
+    std::shared_ptr<ClienteManager> clienteManager = std::make_shared<ClienteManager>(std::make_shared<ClienteDAO>(clientes));
+
+    telaLogin(loginManager, clienteManager, usuarioManager);
+}
+
+void telaLogin(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager) {
+    std::string login, senha;
+    std::cout << "Bem-vindo ao sistema BioCad\n";
+    std::cout << "Login: ";
+    std::getline(std::cin, login);
+    std::cout << "Senha: ";
+    std::getline(std::cin, senha);
+
+
+    std::shared_ptr<Usuario> usuario = loginManager->autenticar(login, senha);
+    while(usuario == nullptr) {
+        std::cout << "Credenciais incorretas.\nTente novamente:\n";
+        std::cout << "Login: ";
+        std::getline(std::cin, login);
+        std::cout << "Senha: ";
+        std::getline(std::cin, senha);
+        usuario = loginManager->autenticar(login, senha);
+    }
+
+    telaInicial(usuario, loginManager, clienteManager, usuarioManager);
+}
+
+
 void telaInicial(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
@@ -12,7 +63,7 @@ void telaInicial(std::shared_ptr<Usuario> usuario,
     int entrada = -1;
     while (entrada != 0) {
         std::cout << "\nBem-vindo " << usuario->getNome() << "\n";
-        auto usuarioOpcoes = usuario->getInterfaceOptions();
+        auto usuarioOpcoes = usuario->getInterface();
         for (const auto& opcao : usuarioOpcoes)
             std::cout << opcao;
         std::cout << "Digite a opcao desejada: ";
@@ -102,12 +153,12 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
         if (idCliente == 0)
             break;
 
-        std::shared_ptr<Cliente> cliente = clienteManager->obterCliente(idCliente);
+        std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
         std::cout << "\n\nDetalhes do cliente:\n"
                   << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
                   << "\nCpf: " << cliente->getCpf() << "\nEndereco: " << cliente->getEndereco()
                   << "\nTelefone: " << cliente->getTelefone() << '\n'
-                  << "\nCheck Ins: " << cliente->getCheckIn() << '\n';
+                  << "\nCheck Ins: " << cliente->getCheckIns() << '\n';
 
         int acao = -1;
         while (true) {
@@ -115,7 +166,8 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
                       << "1 - Atualizar dados\n"
                       << "2 - Visualizar contrato\n"
                       << "3 - Remover cliente\n"
-                      << "4 - Atualizar Check In\n"
+                      << "4 - Realizar Check In\n"
+                      << "5 - Realizar Check Out\n"
                       << "0 - Voltar\n"
                       << "Opcao: ";
             if (!(std::cin >> acao)) {
@@ -212,6 +264,9 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
             } else if (acao == 4) {
                 clienteManager->checkInCliente(cliente);
                 std::cout << "Check In atualizado com sucesso.\n";
+            } else if(acao == 5) {
+                clienteManager->checkOutCliente(cliente);
+                std::cout << "Check Out atualizado com sucesso.\n";
             } else if (acao == 0) {
                 break;
             } else {
@@ -274,7 +329,7 @@ void telaAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
         if (idAtendente == 0)
             break;
 
-        std::shared_ptr<Usuario> usuarioSelecionado = usuarioManager->obterUsuarioId(idAtendente);
+        std::shared_ptr<Usuario> usuarioSelecionado = usuarioManager->getUsuarioId(idAtendente);
         if (!usuarioSelecionado) {
             std::cout << "Atendente nao encontrado.\n";
             continue;
@@ -398,7 +453,7 @@ void telaPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
         if (idTrainer == 0)
             break;
 
-        std::shared_ptr<Usuario> trainerSelecionado = usuarioManager->obterUsuarioId(idTrainer);
+        std::shared_ptr<Usuario> trainerSelecionado = usuarioManager->getUsuarioId(idTrainer);
         if (!trainerSelecionado) {
             std::cout << "Personal trainer nao encontrado.\n";
             continue;
@@ -520,7 +575,7 @@ void telaClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
         if (idCliente == 0)
             break;
 
-        std::shared_ptr<Cliente> cliente = clienteManager->obterCliente(idCliente);
+        std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
         std::cout << "\n\nDetalhes do cliente:\n"
                   << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
                   << "\nTreino: " << cliente->getPlanoDeTreino().getTipoTreino()

@@ -17,6 +17,10 @@
 extern int contadorId;
 extern int contadorIdUsuarios;
 
+void iniciarSistema();
+
+void telaLogin(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager);
+
 void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,

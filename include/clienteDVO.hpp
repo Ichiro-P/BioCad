@@ -62,11 +62,11 @@ class Plano {
     Plano(const std::string& nome = "Mensal", const TipoPlano& tipo = TipoPlano::MENSAL) : nome(nome), tipo(tipo) {};
     virtual ~Plano() = default;
 
-    std::string getNome() const { return this->nome; };
-    TipoPlano getTipo() const { return this->tipo; };
+    std::string getNome() const { return nome; };
+    TipoPlano getTipo() const { return tipo; };
 
-    void setNome(const std::string& novoNome) { this->nome = novoNome; };
-    void setTipo(const TipoPlano& novoTipo) { this->tipo = novoTipo; };
+    void setNome(const std::string& novoNome) { nome = novoNome; };
+    void setTipo(const TipoPlano& novoTipo) { tipo = novoTipo; };
 };
 
 class Contrato {
@@ -95,6 +95,7 @@ class Cliente {
 private:
     int id;
     int checkIns;
+    int checkOuts;
     std::string nome;
     std::string cpf;
     std::string endereco;
@@ -104,15 +105,16 @@ private:
     Contrato contratoVigente;
     Treino planoDeTreino;
 public:
-    Cliente() : id(-1), nome(""), cpf(""), endereco(""), telefone(""), dataNascimento(""), dataCadastro(""), contratoVigente(Contrato()), planoDeTreino(Treino()), checkIns(0) {}
+    Cliente() : id(-1), nome(""), cpf(""), endereco(""), telefone(""), dataNascimento(""), dataCadastro(""), contratoVigente(Contrato()), planoDeTreino(Treino()), checkIns(0), checkOuts(0) {}
     Cliente(int id, const std::string &nome, const std::string &cpf, const std::string &endereco, const std::string &telefone, const std::string &dataNascimento, const std::string &dataCadastro, const Contrato& contratoVigente = Contrato(), const Treino& planodeTreino = Treino())
-     : id(id), nome(nome), cpf(cpf), telefone(telefone), endereco(endereco), dataNascimento(dataNascimento), dataCadastro(dataCadastro), contratoVigente(contratoVigente), planoDeTreino(planodeTreino), checkIns(0) { }
+     : id(id), nome(nome), cpf(cpf), telefone(telefone), endereco(endereco), dataNascimento(dataNascimento), dataCadastro(dataCadastro), contratoVigente(contratoVigente), planoDeTreino(planodeTreino), checkIns(0), checkOuts(0) { }
 
     
     virtual ~Cliente() = default;
 
     int getId() const { return id; }
-    int getCheckIn() const { return checkIns; }
+    int getCheckIns() const { return checkIns; }
+    int getCheckOuts() const { return checkOuts; }
     std::string getNome() const { return nome; }
     std::string getCpf() const { return cpf; }
     std::string getEndereco() const { return endereco; }
@@ -122,13 +124,14 @@ public:
     Contrato getContratoVigente() const { return contratoVigente; }
     Treino getPlanoDeTreino() const { return planoDeTreino; }
 
-    void setNome(const std::string &novoNome) { nome = novoNome; }
-    void setCpf(const std::string &novoCpf) { cpf = novoCpf; }
-    void setEndereco(const std::string &novoEndereco) { endereco = novoEndereco; }
-    void setTelefone(const std::string &novoTelefone) { telefone = novoTelefone; }
-    void setDataNascimento(const std::string &novaDataNascimento) { dataNascimento = novaDataNascimento; }
-    void setDatacadastro(const std::string &novaDataCadastro) { dataCadastro = novaDataCadastro; }
+    void setNome(const std::string& novoNome) { nome = novoNome; }
+    void setCpf(const std::string& novoCpf) { cpf = novoCpf; }
+    void setEndereco(const std::string& novoEndereco) { endereco = novoEndereco; }
+    void setTelefone(const std::string& novoTelefone) { telefone = novoTelefone; }
+    void setDataNascimento(const std::string& novaDataNascimento) { dataNascimento = novaDataNascimento; }
+    void setDatacadastro(const std::string& novaDataCadastro) { dataCadastro = novaDataCadastro; }
     void setContratoVigente(const Contrato& novoContrato) { contratoVigente = novoContrato; }
     void setPlanoDeTreino(const Treino& novoTreino) { planoDeTreino = novoTreino; }
-    void setCheckIn(int qtd) { checkIns = qtd; };
+    void setCheckIns(int qtd) { checkIns = qtd; };
+    void setCheckOuts(int qtd) { checkOuts = qtd; };
 };

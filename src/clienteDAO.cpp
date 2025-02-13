@@ -25,7 +25,12 @@ bool ClienteDAO::atualizar(std::shared_ptr<Cliente> cliente) {
 }
 
 bool ClienteDAO::fazerCheckin(std::shared_ptr<Cliente> cliente) {
-    cliente->setCheckIn(cliente->getCheckIn() + 1);
+    cliente->setCheckIns(cliente->getCheckIns() + 1);
+    return true;
+}
+
+bool ClienteDAO::fazerCheckOut(std::shared_ptr<Cliente> cliente) {
+    cliente->setCheckOuts(cliente->getCheckOuts() + 1);
     return true;
 }
 

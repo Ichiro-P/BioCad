@@ -8,7 +8,7 @@ public:
     Gerente(int id, const std::string &login, const std::string &senha, const std::string &nome)
         : Usuario(id, login, senha, nome, TipoUsuario::GERENTE) { }
         
-    virtual std::vector<std::string> getInterfaceOptions() const override {
+    virtual std::vector<std::string> getInterface() const override {
         return {
             "1 - Listar clientes;\n",
             "2 - Cadastrar cliente;\n",

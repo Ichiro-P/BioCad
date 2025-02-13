@@ -12,5 +12,5 @@ private:
 public:
     LoginManager(std::shared_ptr<UsuarioDAO> dao) : usuarioDAO(dao) {}
     
-    std::shared_ptr<Usuario> autenticar(const std::string &login, const std::string &senha);
+    std::shared_ptr<Usuario> autenticar(const std::string& login, const std::string& senha);
 };

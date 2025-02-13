@@ -22,11 +22,11 @@ public:
             throw std::runtime_error("Falha ao cadastrar cliente");
     }
     
-    std::shared_ptr<Usuario> obterUsuario(const std::shared_ptr<Usuario> usuario) {
+    std::shared_ptr<Usuario> getUsuario(const std::shared_ptr<Usuario> usuario) {
         return usuarioDAO->buscarPorLogin(usuario->getLogin());
     }
 
-    std::shared_ptr<Usuario> obterUsuarioId(int id) {
+    std::shared_ptr<Usuario> getUsuarioId(int id) {
         return usuarioDAO->buscarPorId(id);
     }
     
