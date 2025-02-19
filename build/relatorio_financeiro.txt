@@ -1,0 +1,7 @@
+=== RELATORIO FINANCEIRO ===
+Total de Clientes: 6
+Clientes com Pendencias: 6
+Total de Mensalidades: 6
+Receitas Recebidas: R$ 0.00
+Receitas Pendentes: R$ 900.00
+Saldo Total: R$ 900.00

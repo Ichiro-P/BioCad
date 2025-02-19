@@ -19,44 +19,59 @@ extern int contadorIdUsuarios;
 
 void iniciarSistema();
 
-void telaLogin(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager);
+void login(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
+void menuInicial(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaCadastrarCliente(std::shared_ptr<Usuario> usuario,
+void listarClientesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
+void cadastrarCliente(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaCadastrarAtendente(std::shared_ptr<Usuario> usuario,
+void listarAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
+void cadastrarAtendente(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaCadastrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
+void listarPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
+void cadatrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);
 
-void telaInicial(std::shared_ptr<Usuario> usuario,
+void listarClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
+    std::shared_ptr<LoginManager> loginManager,
+    std::shared_ptr<ClienteManager> clienteManager,
+    std::shared_ptr<UsuarioManager> usuarioManager);
+
+void cadastroCliente(std::shared_ptr<Usuario> usuario,
+    std::shared_ptr<LoginManager> loginManager,
+    std::shared_ptr<ClienteManager> clienteManager,
+    std::shared_ptr<UsuarioManager> usuarioManager, int id);
+
+void cadastroClientePersonalTrainer(std::shared_ptr<Usuario> usuario,
+    std::shared_ptr<LoginManager> loginManager,
+    std::shared_ptr<ClienteManager> clienteManager,
+    std::shared_ptr<UsuarioManager> usuarioManager, int idCliente);
+
+void relatorioFrequencia(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager);

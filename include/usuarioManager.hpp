@@ -38,7 +38,7 @@ public:
         usuarioDAO->remover(id);
     }
     
-    std::vector<std::shared_ptr<Usuario>> listarUsuarios() {
-        return usuarioDAO->listar();
+    std::vector<std::shared_ptr<Usuario>> getUsuarios() {
+        return usuarioDAO->login();
     }
 };

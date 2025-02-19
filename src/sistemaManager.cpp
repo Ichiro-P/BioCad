@@ -1,4 +1,8 @@
 #include <sistemaManager.hpp>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <chrono>
 
 int contadorId = 7;
 int contadorIdUsuarios = 4;
@@ -29,10 +33,10 @@ void iniciarSistema() {
 
     std::shared_ptr<ClienteManager> clienteManager = std::make_shared<ClienteManager>(std::make_shared<ClienteDAO>(clientes));
 
-    telaLogin(loginManager, clienteManager, usuarioManager);
+    login(loginManager, clienteManager, usuarioManager);
 }
 
-void telaLogin(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager) {
+void login(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager) {
     std::string login, senha;
     std::cout << "Bem-vindo ao sistema BioCad\n";
     std::cout << "Login: ";
@@ -51,11 +55,11 @@ void telaLogin(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<Clien
         usuario = loginManager->autenticar(login, senha);
     }
 
-    telaInicial(usuario, loginManager, clienteManager, usuarioManager);
+    menuInicial(usuario, loginManager, clienteManager, usuarioManager);
 }
 
 
-void telaInicial(std::shared_ptr<Usuario> usuario,
+void menuInicial(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
@@ -79,10 +83,10 @@ void telaInicial(std::shared_ptr<Usuario> usuario,
         if (usuario->getTipo() == TipoUsuario::ATENDENTE) {
             switch (entrada) {
                 case 1:
-                    telaClientesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
+                    listarClientesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 2:
-                    telaCadastrarCliente(usuario, loginManager, clienteManager, usuarioManager);
+                    cadastrarCliente(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 0:
                     std::cout << "Saindo...\n";
@@ -93,22 +97,25 @@ void telaInicial(std::shared_ptr<Usuario> usuario,
         } else if (usuario->getTipo() == TipoUsuario::GERENTE) {
             switch (entrada) {
                 case 1:
-                    telaClientesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
+                    listarClientesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 2:
-                    telaCadastrarCliente(usuario, loginManager, clienteManager, usuarioManager);
+                    cadastrarCliente(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 3:
-                    telaAtendentesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
+                    listarAtendentesCadastrados(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 4:
-                    telaCadastrarAtendente(usuario, loginManager, clienteManager, usuarioManager);
+                    cadastrarAtendente(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 5:
-                    telaPersonalTrainersCadastrados(usuario, loginManager, clienteManager, usuarioManager);
+                    listarPersonalTrainersCadastrados(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 6:
-                    telaCadastrarPersonalTrainer(usuario, loginManager, clienteManager, usuarioManager);
+                    cadatrarPersonalTrainer(usuario, loginManager, clienteManager, usuarioManager);
+                    break;
+                case 7:
+                    relatorioFrequencia(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 0:
                     std::cout << "Saindo...\n";
@@ -119,7 +126,7 @@ void telaInicial(std::shared_ptr<Usuario> usuario,
         } else {
             switch (entrada) {
                 case 1:
-                    telaClientesCadastradosPersonalTrainer(usuario, loginManager, clienteManager, usuarioManager);
+                    listarClientesCadastradosPersonalTrainer(usuario, loginManager, clienteManager, usuarioManager);
                     break;
                 case 0:
                     std::cout << "Saindo...\n";
@@ -131,14 +138,14 @@ void telaInicial(std::shared_ptr<Usuario> usuario,
     }
 }
 
-void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
+void listarClientesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
 
     while (true) {
         std::cout << "\nClientes cadastrados:\n";
-        for (const auto &c : clienteManager->listarClientes()) {
+        for (const auto &c : clienteManager->getClientes()) {
             std::cout << "Id: " << c->getId() << " - " << c->getNome() << '\n';
         }
         std::cout << "Selecione um cliente pelo Id (ou 0 para voltar): ";
@@ -150,129 +157,9 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
             continue;
         }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        if (idCliente == 0)
-            break;
+        if (idCliente == 0) break;
 
-        std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
-        std::cout << "\n\nDetalhes do cliente:\n"
-                  << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
-                  << "\nCpf: " << cliente->getCpf() << "\nEndereco: " << cliente->getEndereco()
-                  << "\nTelefone: " << cliente->getTelefone() << '\n'
-                  << "\nCheck Ins: " << cliente->getCheckIns() << '\n';
-
-        int acao = -1;
-        while (true) {
-            std::cout << "\nSelecione uma opcao:\n"
-                      << "1 - Atualizar dados\n"
-                      << "2 - Visualizar contrato\n"
-                      << "3 - Remover cliente\n"
-                      << "4 - Realizar Check In\n"
-                      << "5 - Realizar Check Out\n"
-                      << "0 - Voltar\n"
-                      << "Opcao: ";
-            if (!(std::cin >> acao)) {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Entrada invalida.\n";
-                continue;
-            }
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-            if (acao == 1) {
-                int campo = -1;
-                std::cout << "\nSelecione o campo para atualizar:\n"
-                          << "1 - Nome\n"
-                          << "2 - Cpf\n"
-                          << "3 - Endereco\n"
-                          << "4 - Telefone\n"
-                          << "Opcao: ";
-                if (!(std::cin >> campo)) {
-                    std::cin.clear();
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    std::cout << "Entrada invalida.\n";
-                    continue;
-                }
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::string novoDado;
-                switch (campo) {
-                    case 1:
-                        std::cout << "Informe o novo nome: ";
-                        std::getline(std::cin, novoDado);
-                        cliente->setNome(novoDado);
-                        break;
-                    case 2:
-                        std::cout << "Informe o novo cpf: ";
-                        std::getline(std::cin, novoDado);
-                        cliente->setCpf(novoDado);
-                        break;
-                    case 3:
-                        std::cout << "Informe o novo endereco: ";
-                        std::getline(std::cin, novoDado);
-                        cliente->setEndereco(novoDado);
-                        break;
-                    case 4:
-                        std::cout << "Informe o novo telefone: ";
-                        std::getline(std::cin, novoDado);
-                        cliente->setTelefone(novoDado);
-                        break;
-                    default:
-                        std::cout << "Opcao invalida para atualizacao.\n";
-                        continue;
-                }
-                clienteManager->atualizarCliente(cliente);
-                std::cout << "Dados atualizados com sucesso.\n";
-                break;
-            } else if(acao == 2) {
-                int campo = -1, index;
-                Contrato contrato = cliente->getContratoVigente();
-                std::cout << "Plano vigente: " << contrato.getPlanoVigente().getNome()
-                          << "\nTipo de plano: " << planoString(contrato.getPlanoVigente().getTipo())
-                          << "\nMensalidades nao pagas: ";
-                contrato.mensalidadesNaoPagas();
-                std::cout << "\n1 - Pagar mensalidade"
-                          << "\n0 - Voltar"
-                          << "\nOpcao: ";
-                if (!(std::cin >> campo)) {
-                    std::cin.clear();
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    std::cout << "Entrada invalida.\n";
-                    continue;
-                }
-                switch(campo) {
-                    case 1:
-                        std::cout << "Digite o index da mensalidade: ";
-                        if (!(std::cin >> index)) {
-                            std::cin.clear();
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            std::cout << "Entrada invalida.\n";
-                            continue;
-                        }
-                        contrato.pagarMensalidade(index);
-                        cliente->setContratoVigente(contrato);
-                        std::cout << "Mensalidade paga com sucesso.";
-                        break;
-                    case 0:
-                        break;
-                    default:
-                        std::cout << "Opcao invalida.\n";
-                        continue;
-                }
-            } else if (acao == 3) {
-                clienteManager->removerCliente(cliente->getId());
-                std::cout << "Cliente removido com sucesso.\n";
-                break;
-            } else if (acao == 4) {
-                clienteManager->checkInCliente(cliente);
-                std::cout << "Check In atualizado com sucesso.\n";
-            } else if(acao == 5) {
-                clienteManager->checkOutCliente(cliente);
-                std::cout << "Check Out atualizado com sucesso.\n";
-            } else if (acao == 0) {
-                break;
-            } else {
-                std::cout << "Opcao invalida.\n";
-            }
-        }
+        cadastroCliente(usuario, loginManager, clienteManager, usuarioManager, idCliente);
         char continuar;
         std::cout << "\nDeseja tratar outro cliente? (s/n): ";
         std::cin >> continuar;
@@ -282,7 +169,7 @@ void telaClientesCadastrados(std::shared_ptr<Usuario> usuario,
     }
 }
 
-void telaCadastrarCliente(std::shared_ptr<Usuario> usuario,
+void cadastrarCliente(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
@@ -306,14 +193,14 @@ void telaCadastrarCliente(std::shared_ptr<Usuario> usuario,
 
 }
 
-void telaAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
+void listarAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
 
     while (true) {
         std::cout << "\nAtendentes cadastrados:\n";
-        for (const auto &u : usuarioManager->listarUsuarios()) {
+        for (const auto &u : usuarioManager->getUsuarios()) {
             if (u->getTipo() == TipoUsuario::ATENDENTE)
                 std::cout << "Id: " << u->getId() << " - " << u->getNome() << '\n';
         }
@@ -409,7 +296,7 @@ void telaAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
     }
 }
 
-void telaCadastrarAtendente(std::shared_ptr<Usuario> usuario,
+void cadastrarAtendente(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
@@ -430,14 +317,14 @@ void telaCadastrarAtendente(std::shared_ptr<Usuario> usuario,
 
 }
 
-void telaPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
+void listarPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
 
     while (true) {
         std::cout << "\nPersonal Trainers cadastrados:\n";
-        for (const auto &u : usuarioManager->listarUsuarios()) {
+        for (const auto &u : usuarioManager->getUsuarios()) {
             if (u->getTipo() == TipoUsuario::PERSONAL_TRAINER)
                 std::cout << "Id: " << u->getId() << " - " << u->getNome() << '\n';
         }
@@ -533,7 +420,7 @@ void telaPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
     }
 }
 
-void telaCadastrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
+void cadatrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
@@ -553,14 +440,14 @@ void telaCadastrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
     std::cout << "Personal Trainer cadastrado: " << novoUsuario->getNome() << '\n';
 }
 
-void telaClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
+void listarClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
     std::shared_ptr<LoginManager> loginManager,
     std::shared_ptr<ClienteManager> clienteManager,
     std::shared_ptr<UsuarioManager> usuarioManager) {
 
     while (true) {
         std::cout << "\nClientes cadastrados:\n";
-        for (const auto &c : clienteManager->listarClientes()) {
+        for (const auto &c : clienteManager->getClientes()) {
             std::cout << "Id: " << c->getId() << " - " << c->getNome() << '\n';
         }
         std::cout << "Selecione um cliente pelo Id (ou 0 para voltar): ";
@@ -572,81 +459,270 @@ void telaClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
             continue;
         }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        if (idCliente == 0)
-            break;
-
-        std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
-        std::cout << "\n\nDetalhes do cliente:\n"
-                  << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
-                  << "\nTreino: " << cliente->getPlanoDeTreino().getTipoTreino()
-                  << "\nObjetivo: " << cliente->getPlanoDeTreino().getObjetivos()
-                  << "\nCondicoes especiais: " << cliente->getPlanoDeTreino().getCondicaoEspecial() << "\n";
-
-        int acao = -1;
-        while (true) {
-            std::cout << "\nSelecione uma opcao:\n"
-                      << "1 - Atualizar dados\n"
-                      << "0 - Voltar\n"
-                      << "Opcao: ";
-            if (!(std::cin >> acao)) {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Entrada invalida.\n";
-                continue;
-            }
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-            if (acao == 1) {
-                Treino novoTreino = cliente->getPlanoDeTreino();
-                int campo = -1;
-                std::cout << "\nSelecione o campo para atualizar:\n"
-                          << "1 - Tipo de Treino\n"
-                          << "2 - Objetivo\n"
-                          << "3 - Condicoes especiais\n"
-                          << "Opcao: ";
-                if (!(std::cin >> campo)) {
-                    std::cin.clear();
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    std::cout << "Entrada invalida.\n";
-                    continue;
-                }
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::string novoDado;
-                switch (campo) {
-                    case 1:
-                        std::cout << "Informe o novo tipo de treino: ";
-                        std::getline(std::cin, novoDado);
-                        novoTreino.setTipoTreino(novoDado);
-                        break;
-                    case 2:
-                        std::cout << "Informe o novo objetivo: ";
-                        std::getline(std::cin, novoDado);
-                        novoTreino.setObjetivos(novoDado);
-                        break;
-                    case 3:
-                        std::cout << "Informe a condicao especial: ";
-                        std::getline(std::cin, novoDado);
-                        novoTreino.setCondicaoEspecial(novoDado);
-                        break;
-                    default:
-                        std::cout << "Opcao invalida para atualizacao.\n";
-                        continue;
-                }
-                cliente->setPlanoDeTreino(novoTreino);
-                clienteManager->atualizarCliente(cliente);
-                std::cout << "Dados atualizados com sucesso.\n";
-                break;
-            } else if (acao == 0) {
-                break;
-            } else {
-                std::cout << "Opcao invalida.\n";
-            }
-        }
+        if (idCliente == 0) break;
+        cadastroClientePersonalTrainer(usuario, loginManager, clienteManager, usuarioManager, idCliente);
         char continuar;
         std::cout << "\nDeseja tratar outro cliente? (s/n): ";
         std::cin >> continuar;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         if (continuar == 'n' || continuar == 'N')
             break;
+    }
+}
+
+void cadastroCliente(std::shared_ptr<Usuario> usuario, 
+    std::shared_ptr<LoginManager> loginManager, 
+    std::shared_ptr<ClienteManager> clienteManager, 
+    std::shared_ptr<UsuarioManager> usuarioManager, int idCliente) {
+
+    std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
+    std::cout << "\n\nDetalhes do cliente:\n"
+              << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
+              << "\nCpf: " << cliente->getCpf() << "\nEndereco: " << cliente->getEndereco()
+              << "\nTelefone: " << cliente->getTelefone() << '\n'
+              << "\nCheck Ins: " << cliente->getCheckIns() << '\n';
+    int acao = -1;
+    while (true) {
+        std::cout << "\nSelecione uma opcao:\n"
+                  << "1 - Atualizar dados\n"
+                  << "2 - Visualizar contrato\n"
+                  << "3 - Remover cliente\n"
+                  << "4 - Realizar Check In\n"
+                  << "5 - Realizar Check Out\n"
+                  << "0 - Voltar\n"
+                  << "Opcao: ";
+        if (!(std::cin >> acao)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Entrada invalida.\n";
+            continue;
+        }
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        if (acao == 1) {
+            int campo = -1;
+            std::cout << "\nSelecione o campo para atualizar:\n"
+                      << "1 - Nome\n"
+                      << "2 - Cpf\n"
+                      << "3 - Endereco\n"
+                      << "4 - Telefone\n"
+                      << "Opcao: ";
+            if (!(std::cin >> campo)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Entrada invalida.\n";
+                continue;
+            }
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::string novoDado;
+            switch (campo) {
+                case 1:
+                    std::cout << "Informe o novo nome: ";
+                    std::getline(std::cin, novoDado);
+                    cliente->setNome(novoDado);
+                    break;
+                case 2:
+                    std::cout << "Informe o novo cpf: ";
+                    std::getline(std::cin, novoDado);
+                    cliente->setCpf(novoDado);
+                break;
+                case 3:
+                    std::cout << "Informe o novo endereco: ";
+                    std::getline(std::cin, novoDado);
+                    cliente->setEndereco(novoDado);
+                    break;
+                case 4:
+                    std::cout << "Informe o novo telefone: ";
+                    std::getline(std::cin, novoDado);
+                    cliente->setTelefone(novoDado);
+                    break;
+                default:
+                    std::cout << "Opcao invalida para atualizacao.\n";
+                    continue;
+            }
+            clienteManager->atualizarCliente(cliente);
+            std::cout << "Dados atualizados com sucesso.\n";
+            break;
+        } else if(acao == 2) {
+            int campo = -1, index;
+            Contrato contrato = cliente->getContratoVigente();
+            std::cout << "Plano vigente: " << contrato.getPlanoVigente().getNome()
+                      << "\nTipo de plano: " << planoString(contrato.getPlanoVigente().getTipo())
+                      << "\nMensalidades nao pagas: ";
+            contrato.mensalidadesNaoPagas();
+            std::cout << "\n1 - Pagar mensalidade"
+                      << "\n0 - Voltar"
+                      << "\nOpcao: ";
+            if (!(std::cin >> campo)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Entrada invalida.\n";
+                continue;
+            }
+            switch(campo) {
+                case 1:
+                    std::cout << "Digite o index da mensalidade: ";
+                    if (!(std::cin >> index)) {
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        std::cout << "Entrada invalida.\n";
+                        continue;
+                    }
+                    contrato.pagarMensalidade(index);
+                    cliente->setContratoVigente(contrato);
+                    std::cout << "Mensalidade paga com sucesso.";
+                    break;
+                case 0:
+                    break;
+                default:
+                    std::cout << "Opcao invalida.\n";
+                    continue;
+            }
+        } else if (acao == 3) {
+            clienteManager->removerCliente(cliente->getId());
+            std::cout << "Cliente removido com sucesso.\n";
+            break;
+        } else if (acao == 4) {
+            clienteManager->checkInCliente(cliente);
+            std::cout << "Check In atualizado com sucesso.\n";
+        } else if(acao == 5) {
+            clienteManager->checkOutCliente(cliente);
+            std::cout << "Check Out atualizado com sucesso.\n";
+        } else if (acao == 0) {
+            break;
+        } else {
+            std::cout << "Opcao invalida.\n";
+        }
+    }
+}
+
+void cadastroClientePersonalTrainer(std::shared_ptr<Usuario> usuario, 
+    std::shared_ptr<LoginManager> loginManager, 
+    std::shared_ptr<ClienteManager> clienteManager, 
+    std::shared_ptr<UsuarioManager> usuarioManager, int idCliente) {
+    std::shared_ptr<Cliente> cliente = clienteManager->getCliente(idCliente);
+    std::cout << "\n\nDetalhes do cliente:\n"
+              << "Id: " << cliente->getId() << "\nNome: " << cliente->getNome()
+              << "\nTreino: " << cliente->getPlanoDeTreino().getTipoTreino()
+              << "\nObjetivo: " << cliente->getPlanoDeTreino().getObjetivos()
+              << "\nCondicoes especiais: " << cliente->getPlanoDeTreino().getCondicaoEspecial() << "\n";
+
+    int acao = -1;
+    while (true) {
+        std::cout << "\nSelecione uma opcao:\n"
+                  << "1 - Atualizar dados\n"
+                  << "0 - Voltar\n"
+                  << "Opcao: ";
+        if (!(std::cin >> acao)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Entrada invalida.\n";
+            continue;
+        }
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        if (acao == 1) {
+            Treino novoTreino = cliente->getPlanoDeTreino();
+            int campo = -1;
+            std::cout << "\nSelecione o campo para atualizar:\n"
+                      << "1 - Tipo de Treino\n"
+                      << "2 - Objetivo\n"
+                      << "3 - Condicoes especiais\n"
+                      << "Opcao: ";
+            if (!(std::cin >> campo)) {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Entrada invalida.\n";
+                continue;
+            }
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::string novoDado;
+            switch (campo) {
+                case 1:
+                    std::cout << "Informe o novo tipo de treino: ";
+                    std::getline(std::cin, novoDado);
+                    novoTreino.setTipoTreino(novoDado);
+                    break;
+                case 2:
+                    std::cout << "Informe o novo objetivo: ";
+                    std::getline(std::cin, novoDado);
+                    novoTreino.setObjetivos(novoDado);
+                    break;
+                case 3:
+                    std::cout << "Informe a condicao especial: ";
+                    std::getline(std::cin, novoDado);
+                    novoTreino.setCondicaoEspecial(novoDado);
+                    break;
+                default:
+                    std::cout << "Opcao invalida para atualizacao.\n";
+                    continue;
+            }
+            cliente->setPlanoDeTreino(novoTreino);
+            clienteManager->atualizarCliente(cliente);
+            std::cout << "Dados atualizados com sucesso.\n";
+            break;
+        } else if (acao == 0) {
+            break;
+        } else {
+            std::cout << "Opcao invalida.\n";
+        }
+    }
+}
+
+void relatorioFrequencia(std::shared_ptr<Usuario> usuario,
+    std::shared_ptr<LoginManager> loginManager,
+    std::shared_ptr<ClienteManager> clienteManager,
+    std::shared_ptr<UsuarioManager> usuarioManager) {
+    
+    // Gera o relatorio na login
+    std::cout << "\nRelatorio de Frequencia de Clientes\n";
+    
+    auto clientes = clienteManager->getClientes();
+    
+    std::stringstream relatorio;
+    relatorio << std::left 
+              << std::setw(5) << "ID" 
+              << std::setw(25) << "Nome"
+              << std::setw(15) << "Check-Ins"
+              << std::setw(15) << "Check-Outs"
+              << "\n";
+    
+    for (const auto& cliente : clientes) {
+        relatorio << std::left
+                  << std::setw(5) << cliente->getId()
+                  << std::setw(25) << cliente->getNome().substr(0, 24)
+                  << std::setw(15) << cliente->getCheckIns()
+                  << std::setw(15) << cliente->getCheckOuts()
+                  << "\n";
+    }
+    
+    std::cout << relatorio.str();
+    
+    // Opção de exportação
+    char opcao;
+    std::cout << "\nDeseja exportar para arquivo texto? (s/n): ";
+    std::cin >> opcao;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    
+    if (tolower(opcao) == 's') {
+        auto now = std::chrono::system_clock::now();
+        std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+        std::stringstream filename;
+        filename << "relatorio_frequencia_"
+                 << std::put_time(std::localtime(&now_c), "%Y%m%d_%H%M%S")
+                 << ".txt";
+
+        std::ofstream arquivo(filename.str());
+        if (arquivo.is_open()) {
+            arquivo << "Relatorio de Frequencia - BioCad\n";
+            arquivo << "Gerado em: " 
+                    << std::put_time(std::localtime(&now_c), "%d/%m/%Y %H:%M:%S") 
+                    << "\n\n";
+            arquivo << relatorio.str();
+            arquivo.close();
+            std::cout << "Arquivo salvo como: " << filename.str() << "\n";
+        } else {
+            std::cout << "Erro ao salvar o arquivo!\n";
+        }
     }
 }

@@ -44,7 +44,7 @@ public:
         if(cliente->getCheckOuts() < 2) cliente->setCheckOuts(cliente->getCheckOuts()+1);
     }
     
-    std::vector<std::shared_ptr<Cliente>> listarClientes() {
-        return clienteDAO->listar();
+    std::vector<std::shared_ptr<Cliente>> getClientes() {
+        return clienteDAO->login();
     }
 };

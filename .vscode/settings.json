@@ -70,6 +70,17 @@
         "numbers": "cpp",
         "span": "cpp",
         "text_encoding": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "iomanip": "cpp",
+        "map": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp",
+        "xtree": "cpp",
+        "condition_variable": "cpp",
+        "semaphore": "cpp"
     }
 }

@@ -16,6 +16,7 @@ public:
             "4 - Cadastrar atendente;\n",
             "5 - Listar personal trainers;\n",
             "6 - Cadastrar personal trainer;\n",
+            "7 - Gerar relatorio de frequencia;\n",
             "0 - Sair.\n"
         };
     }

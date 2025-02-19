@@ -15,5 +15,5 @@ public:
     bool fazerCheckOut(std::shared_ptr<Cliente> cliente);
     bool remover(int id);
     std::shared_ptr<Cliente> buscar(int id);
-    std::vector<std::shared_ptr<Cliente>> listar();
+    std::vector<std::shared_ptr<Cliente>> login();
 };

@@ -45,6 +45,6 @@ bool UsuarioDAO::remover(int id) {
     return false;
 }
 
-std::vector<std::shared_ptr<Usuario>> UsuarioDAO::listar() {
+std::vector<std::shared_ptr<Usuario>> UsuarioDAO::login() {
     return usuarios;
 }

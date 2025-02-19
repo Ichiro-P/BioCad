@@ -16,5 +16,5 @@ public:
     bool adicionar(const std::shared_ptr<Usuario> usuario);
     bool atualizar(const std::shared_ptr<Usuario> usuario);
     bool remover(int id);
-    std::vector<std::shared_ptr<Usuario>> listar();
+    std::vector<std::shared_ptr<Usuario>> login();
 };

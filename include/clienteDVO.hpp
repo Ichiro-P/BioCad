@@ -78,6 +78,7 @@ class Contrato {
     virtual ~Contrato() = default;
 
     void mensalidadesNaoPagas();
+    const std::vector<Mensalidade>& getMensalidades() const { return mensalidades; }
     Plano getPlanoVigente() const { return planoVigente; };
     bool pagarMensalidade(int index) {
         if (index < 0 || index >= static_cast<int>(mensalidades.size())) {
@@ -86,7 +87,6 @@ class Contrato {
         mensalidades[index].setStatus(Status::PAGO);
         return true;
     }
-
     void setPlanoVigente(const Plano& novoPlano) { planoVigente = novoPlano; };
     
 };
@@ -123,7 +123,6 @@ public:
     std::string getDataCadastro() const { return dataCadastro; }
     Contrato getContratoVigente() const { return contratoVigente; }
     Treino getPlanoDeTreino() const { return planoDeTreino; }
-
     void setNome(const std::string& novoNome) { nome = novoNome; }
     void setCpf(const std::string& novoCpf) { cpf = novoCpf; }
     void setEndereco(const std::string& novoEndereco) { endereco = novoEndereco; }

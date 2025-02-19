@@ -52,6 +52,6 @@ std::shared_ptr<Cliente> ClienteDAO::buscar(int id) {
     return nullptr;
 }
 
-std::vector<std::shared_ptr<Cliente>> ClienteDAO::listar() {
+std::vector<std::shared_ptr<Cliente>> ClienteDAO::login() {
     return clientes;
 }
