@@ -164,8 +164,7 @@ void listarClientesCadastrados(std::shared_ptr<Usuario> usuario,
         std::cout << "\nDeseja tratar outro cliente? (s/n): ";
         std::cin >> continuar;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        if (continuar == 'n' || continuar == 'N')
-            break;
+        if (continuar == 'n' || continuar == 'N') break;
     }
 }
 
@@ -546,10 +545,20 @@ void cadastroCliente(std::shared_ptr<Usuario> usuario,
         } else if(acao == 2) {
             int campo = -1, index;
             Contrato contrato = cliente->getContratoVigente();
+            std::vector<Mensalidade> mensalidades = contrato.getMensalidades();
             std::cout << "Plano vigente: " << contrato.getPlanoVigente().getNome()
                       << "\nTipo de plano: " << planoString(contrato.getPlanoVigente().getTipo())
                       << "\nMensalidades nao pagas: ";
-            contrato.mensalidadesNaoPagas();
+            for(const auto mensalidade: mensalidades) {
+                for(int i = 0; i < mensalidades.size(); ++i) {
+                    if(mensalidades[i].getStatus() == Status::PENDENTE) {
+                        std::cout <<  "\nIndex : " << i 
+                                  << "; Data de vencimento relativa: " 
+                                  << mensalidades[i].getDataVencimentoRelativa() << "; Valor: " 
+                                  << mensalidades[i].getValor();
+                    }
+                }
+            }
             std::cout << "\n1 - Pagar mensalidade"
                       << "\n0 - Voltar"
                       << "\nOpcao: ";
@@ -569,6 +578,7 @@ void cadastroCliente(std::shared_ptr<Usuario> usuario,
                         continue;
                     }
                     contrato.pagarMensalidade(index);
+                    mensalidades[index].setStatus(Status::PAGO);
                     cliente->setContratoVigente(contrato);
                     std::cout << "Mensalidade paga com sucesso.";
                     break;

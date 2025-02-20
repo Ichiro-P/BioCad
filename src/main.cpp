@@ -13,6 +13,14 @@
 #include <string>
 #include <limits>
 
+/*
+colinha de cadastros para debug (tipo, login, senha, nome):
+Atendente eduardo(1, "eduardo", "maromba", "Eduardo");
+PersonalTrainer suteam(2, "suteam", "mateus", "Matheus Vinicius");
+Gerente root(3, "root", "root", "Administrador");
+
+*/
+
 int main() {
     iniciarSistema();
     

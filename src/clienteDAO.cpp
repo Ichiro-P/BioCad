@@ -8,8 +8,7 @@ ClienteDAO::ClienteDAO(const std::vector<std::shared_ptr<Cliente>>& vetorCliente
     }
 }
 
-bool ClienteDAO::adicionar(std::shared_ptr<Cliente> cliente)
-{
+bool ClienteDAO::adicionar(std::shared_ptr<Cliente> cliente) {
     clientes.push_back(cliente);
     return true;
 }

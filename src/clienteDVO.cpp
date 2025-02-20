@@ -29,14 +29,6 @@ Contrato::Contrato(const Plano &planoVigente) : planoVigente(planoVigente) {
     }
 }
 
-void Contrato::mensalidadesNaoPagas() {
-    for(int i = 0; i < mensalidades.size(); ++i) {
-        if(mensalidades[i].getStatus() == Status::PENDENTE) {
-            std::cout <<  "\nIndex : " << i << "; Data de vencimento relativa: " << mensalidades[i].getDataVencimentoRelativa() << "; Valor: " << mensalidades[i].getValor();
-        }
-    }
-}
-
 std::string planoString(const TipoPlano &plano) {
     if(plano == TipoPlano::ANUAL) {
         return "anual";

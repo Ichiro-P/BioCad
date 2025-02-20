@@ -77,7 +77,6 @@ class Contrato {
     Contrato(const Plano& planoVigente = Plano());
     virtual ~Contrato() = default;
 
-    void mensalidadesNaoPagas();
     const std::vector<Mensalidade>& getMensalidades() const { return mensalidades; }
     Plano getPlanoVigente() const { return planoVigente; };
     bool pagarMensalidade(int index) {
