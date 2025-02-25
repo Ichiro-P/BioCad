@@ -1,77 +1,119 @@
 #pragma once
-
-#include <loginManager.hpp>
-#include <clienteManager.hpp>
-#include <usuarioManager.hpp>
-#include <clienteDAO.hpp>
-#include <usuarioDAO.hpp>
-#include <clienteDVO.hpp>
-#include <usuarioDVO.hpp>
-
-#include <iostream>
 #include <memory>
-#include <vector>
 #include <string>
-#include <limits>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+#include <cliente.hpp>
+#include <checkIn.hpp>
+#include <checkOut.hpp>
+#include <contrato.hpp>
+#include <mensalidade.hpp>
+#include <desconto.hpp>
+#include <relatorio.hpp>
+#include <planoDeTreino.hpp>
+#include <planoFinanceiro.hpp>
 
-extern int contadorId;
-extern int contadorIdUsuarios;
+class SistemaManager {
+public:
+    std::unique_ptr<ClienteManager> clienteManager;
+    std::unique_ptr<CheckInManager> checkInManager;
+    std::unique_ptr<CheckOutManager> checkOutManager;
+    std::unique_ptr<ContratoManager> contratoManager;
+    std::unique_ptr<MensalidadeManager> mensalidadeManager;
+    std::unique_ptr<PlanoDeTreinoManager> planoTreinoManager;
+    std::unique_ptr<PlanoFinanceiroManager> planoFinanceiroManager;
+    std::unique_ptr<DescontoManager> descontoManager;
+    std::unique_ptr<RelatorioManager> relatorioManager;
 
-void iniciarSistema();
+    SistemaManager()
+        : clienteManager(std::make_unique<ClienteManager>(ClienteDAO{}))
+        , checkInManager(std::make_unique<CheckInManager>(CheckInDAO{}))
+        , checkOutManager(std::make_unique<CheckOutManager>(CheckOutDAO{}))
+        , contratoManager(std::make_unique<ContratoManager>(ContratoDAO{}))
+        , mensalidadeManager(std::make_unique<MensalidadeManager>(MensalidadeDAO{}))
+        , planoTreinoManager(std::make_unique<PlanoDeTreinoManager>(PlanoDeTreinoDAO{}))
+        , planoFinanceiroManager(std::make_unique<PlanoFinanceiroManager>(PlanoFinanceiroDAO{}))
+        , descontoManager(std::make_unique<DescontoManager>())
+        , relatorioManager(std::make_unique<RelatorioManager>()) {}
 
-void login(std::shared_ptr<LoginManager> loginManager, std::shared_ptr<ClienteManager> clienteManager, std::shared_ptr<UsuarioManager> usuarioManager);
+    ClienteDVO pesquisarClienteCadastrado(const std::string& cpfCliente) {
+        return clienteManager->getClienteDVO(cpfCliente);
+    }
 
-void menuInicial(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    ContratoDVO selecionarContrato(const std::string& cpfCliente) {
+        return contratoManager->getContratoDVO(cpfCliente);
+    }
 
-void listarClientesCadastrados(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    void imprimirContrato(const ContratoDVO& contrato) {
+        const auto plano = contrato.getPlano();
+        std::cout << "=== Contrato ===\n"
+                  << "Cliente: " << contrato.getNomeCliente() << "\n"
+                  << "CPF: " << contrato.getCpfCliente() << "\n"
+                  << "Plano: " << plano.getNomePlano() << "\n"
+                  << "Tipo: " << static_cast<int>(plano.getTipoPlano()) << "\n"
+                  << "Status: " << static_cast<int>(contrato.getCondicao()) << "\n";
+    }
 
-void cadastrarCliente(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    ContratoDVO digitalizarContrato(ContratoDVO contrato) {
+        contratoManager->atualizarContrato(contrato);
+        return contratoManager->getContratoDVO(contrato.getCpfCliente());
+    }
 
-void listarAtendentesCadastrados(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    void cancelarContrato(ContratoDVO& contrato) {
+        contratoManager->setContratoCancelado(contrato);
+    }
 
-void cadastrarAtendente(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    ContratoDVO renovarContrato(ContratoDVO& contrato, const std::tm& novaDataFim) {
+        return contratoManager->renovarContrato(contrato, novaDataFim);
+    }
 
-void listarPersonalTrainersCadastrados(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    MensalidadeDVO exibirMensalidade(const std::string& cpfCliente) {
+        auto mensalidades = mensalidadeManager->getMensalidades(cpfCliente);
+        return !mensalidades.empty() ? mensalidades.back() : MensalidadeDVO();
+    }
 
-void cadatrarPersonalTrainer(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    DescontoDVO calcularDescontoFidelidade(const std::string& cpfCliente) {
+        float total = 0.0f;
+        for (const auto& mensalidade : mensalidadeManager->getMensalidades(cpfCliente)) {
+            if (descontoManager->validarDesconto(mensalidade)) {
+                total += descontoManager->calcularDesconto(mensalidade);
+            }
+        }
+        return DescontoDVO(total);
+    }
 
-void listarClientesCadastradosPersonalTrainer(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    void pagarMensalidade(int idMensalidade, const std::string& cpfCliente) {
+        if (mensalidadeManager->validarId(idMensalidade, cpfCliente)) {
+            auto mensalidade = mensalidadeManager->getMensalidadeDVO(idMensalidade);
+            mensalidade.setStatus(Status::PAGO);
+            mensalidadeManager->atualizarMensalidade(mensalidade);
+        }
+    }
 
-void cadastroCliente(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager, int id);
+    void emitirReciboPagamento(int idMensalidade) {
+        std::cout << mensalidadeManager->getRecibo(idMensalidade) << std::endl;
+    }
 
-void cadastroClientePersonalTrainer(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager, int idCliente);
+    void checkInCliente(const std::string& cpfCliente) {
+        checkInManager->adicionarCheckIn(cpfCliente);
+    }
 
-void relatorioFrequencia(std::shared_ptr<Usuario> usuario,
-    std::shared_ptr<LoginManager> loginManager,
-    std::shared_ptr<ClienteManager> clienteManager,
-    std::shared_ptr<UsuarioManager> usuarioManager);
+    void checkOutCliente(const std::string& cpfCliente) {
+        checkOutManager->adicionarCheckOut(cpfCliente);
+    }
+
+    RelatorioDVO gerarRelatorioFrequencia(const std::tm& inicio, const std::tm& fim) {
+        auto checkIns = checkInManager->getCheckInsPeriodo(inicio, fim);
+        auto checkOuts = checkOutManager->getCheckOutsPeriodo(inicio, fim);
+        return relatorioManager->gerarRelatorioFrequencia(inicio, fim, checkIns, checkOuts);
+    }
+
+    static void exportar(const std::string& conteudo) {
+        std::ofstream("conteudo.txt") << conteudo;
+    }
+
+    static void imprimir(const std::string& conteudo) {
+        std::cout << conteudo << '\n';
+    }
+};
