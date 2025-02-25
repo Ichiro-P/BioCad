@@ -1,6 +1,7 @@
 #include <cliente.hpp>
 #include <string>
 #include <chrono>
+#include <algorithm>
 
 ClienteDVO::ClienteDVO(const std::string &cpf, const std::string &nomeCompleto, const std::string &telefone, const std::string &endereco, int diaNascimento, int mesNascimento, int anoNascimento)
  : cpf(cpf), nomeCompleto(nomeCompleto), telefone(telefone), endereco(endereco) {

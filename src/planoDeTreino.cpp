@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <algorithm>
 #include <enums.hpp>
 
 PlanoDeTreinoDVO::PlanoDeTreinoDVO(const std::string &cpfCliente, const std::string &nomeCliente, const std::vector<std::string> &objetivosCliente, const std::vector<std::string> &condicaoMedicacliente, const std::string &tipoTreino)

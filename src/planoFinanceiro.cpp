@@ -2,6 +2,7 @@
 #include <string>
 #include <memory>
 #include <optional>
+#include <algorithm>
 #include <planoFinanceiro.hpp>
 
 PlanoFinanceiroDAO::PlanoFinanceiroDAO(std::vector<PlanoFinanceiroDVO> &planos) {
