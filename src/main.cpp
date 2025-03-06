@@ -3,6 +3,7 @@
 #include <limits>
 #include <sistemaManager.hpp>
 #include <dadosTeste.hpp>
+#include <stdio.h>
 
 
 void exibirMenuPrincipal();
